@@ -1,0 +1,13 @@
+
+What I did:
+- Created a functional HerbSelection class
+- Created cards for each herb.
+- Created Recipe Fragment
+Current issues:
+- Recipes on RecipeFragment is printed twice.
+- Home button on BasilCard screen doesn't have any functionality
+- HerbSelection only works for BasilCard so functionality needs
+  to be extended for our other cards as production goes on.
+
+Sloane Wright, November 7 3:50PM
+================================================================
