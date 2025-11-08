@@ -8,6 +8,7 @@ Current issues:
 - Home button on BasilCard screen doesn't have any functionality
 - HerbSelection only works for BasilCard so functionality needs
   to be extended for our other cards as production goes on.
+- Only one recipe is being listed in BasilCard instead of 3.
 
 Sloane Wright, November 7 3:50PM
 ================================================================

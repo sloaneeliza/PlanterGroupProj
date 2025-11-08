@@ -11,7 +11,7 @@ public class BasilCard extends AppCompatActivity {
         setContentView(R.layout.activity_basil_card);
 
         getSupportFragmentManager().beginTransaction()
-                .replace(R.id.recipeFragmentContainer, RecipeFragment.newInstance("Basil"))
+                .replace(R.id.recipeFragment, RecipeFragment.newInstance("Basil"))
                 .commit();
     }
 }

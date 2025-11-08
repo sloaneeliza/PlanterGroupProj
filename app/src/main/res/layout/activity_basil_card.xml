@@ -29,6 +29,7 @@
             android:src="@drawable/basicleaf"
             android:contentDescription="Basil Leaf"
             android:adjustViewBounds="true"
+            android:layout_marginTop="75dp"
             android:layout_marginBottom="16dp"/>
 
         <TextView
@@ -53,10 +54,12 @@
             android:layout_marginBottom="24dp"/>
 
         <fragment
-            android:id="@+id/recipeFragmentContainer"
+            android:id="@+id/recipeFragment"
             android:name="com.example.plantergroupproj.RecipeFragment"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="match_parent"
+            android:layout_marginTop="8dp"/>
+
 
 
     </LinearLayout>
