@@ -10,5 +10,10 @@ Current issues:
   to be extended for our other cards as production goes on.
 - Only one recipe is being listed in BasilCard instead of 3.
 
+** note that the leaf image being used in the BasilCard
+   is just a generic leaf photo and will need to be updated.
+   It's a placeholder for now while we are in early stages
+   of development
+
 Sloane Wright, November 7 3:50PM
 ================================================================
