@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
 
     <LinearLayout
         android:orientation="vertical"
@@ -10,25 +11,53 @@
         android:layout_height="wrap_content">
 
         <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="25dp"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp">
+
+            <ImageButton
+                android:id="@+id/backButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_arrow_back"
+                android:padding="8dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Back" />
+
+            <TextView
+                android:text="HOME"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center|end" />
+        </LinearLayout>
+
+        <LinearLayout
             android:orientation="vertical"
             android:gravity="center_horizontal"
             android:padding="24dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:paddingTop="0dp">
 
-            <TextView
-                android:text="Home"
-                android:textStyle="bold"
-                android:textSize="14sp"
-                android:layout_gravity="end"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingBottom="16dp"/>
-
+            <ImageView
+                android:id="@+id/bay"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:src="@drawable/bay"
+                android:contentDescription="BayLeaf"
+                android:adjustViewBounds="true"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="16dp"/>
 
             <TextView
                 android:id="@+id/bayTitle"
-                android:text="Bay Leaf"
+                android:text="Bay"
                 android:textSize="28sp"
                 android:textStyle="bold"
                 android:textColor="#000000"
@@ -37,7 +66,7 @@
                 android:layout_marginBottom="12dp"/>
 
             <TextView
-                android:id="@+id/basilDescription"
+                android:id="@+id/bayDescription"
                 android:text="Bay leaf is an aromatic dried herb added whole to soups, stews, sauces, and braises to infuse a subtle, savory, and floral depth, and is typically removed before the dish is served."
                 android:textSize="16sp"
                 android:textColor="#444444"
@@ -52,7 +81,7 @@
             android:id="@+id/recipeFragment"
             android:name="com.example.plantergroupproj.RecipeFragment"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginTop="8dp"/>
     </LinearLayout>
 </ScrollView>

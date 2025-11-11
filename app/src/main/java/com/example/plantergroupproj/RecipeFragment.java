@@ -96,7 +96,40 @@ public class RecipeFragment extends Fragment {
                         R.drawable.lemonade
                 ));
                 break;
-
+            case "Bay":
+                recipes.add(new Recipe(
+                        "Classic Beef Stew",
+                        "A hearty, comforting stew where bay leaves provide subtle aromatic depth.",
+                        "Ingredients:\n" +
+                                "- 2 lbs beef chuck, cubed\n" +
+                                "- 2 tbsp olive oil\n" +
+                                "- 1 large onion, chopped\n" +
+                                "- 3 carrots, sliced\n" +
+                                "- 3 celery stalks, sliced\n" +
+                                "- 3 cloves garlic, minced\n" +
+                                "- 4 cups beef broth\n" +
+                                "- 1 cup red wine (optional)\n" +
+                                "- 2 bay leaves\n" +
+                                "- 1 tsp thyme\n" +
+                                "- 2 potatoes, cubed\n" +
+                                "- Salt and pepper to taste\n" +
+                                "- 2 tbsp tomato paste\n\n" +
+                                "Instructions:\n" +
+                                "1. Season beef with salt and pepper. Heat oil in large pot and brown beef in batches.\n" +
+                                "2. Add onions, carrots, and celery. Cook until softened (5-7 minutes).\n" +
+                                "3. Add garlic and tomato paste, cook for 1 minute until fragrant.\n" +
+                                "4. Return beef to pot, add broth, wine, bay leaves, and thyme.\n" +
+                                "5. Bring to boil, then reduce heat and simmer covered for 1.5 hours.\n" +
+                                "6. Add potatoes and cook for 30 more minutes until tender.\n" +
+                                "7. Remove bay leaves before serving.\n" +
+                                "8. Season with additional salt and pepper if needed.\n\n" +
+                                "Tips:\n" +
+                                "- Bay leaves are essential for depth of flavor - don't skip them!\n" +
+                                "- Remember to remove bay leaves before serving as they can be sharp\n" +
+                                "- Stew tastes even better the next day as flavors meld",
+                        R.drawable.beef_stew
+                ));
+                break;
             case "Mint":
                 // Add mint recipes here
                 break;

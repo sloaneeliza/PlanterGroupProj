@@ -49,7 +49,7 @@
                 android:id="@+id/basilImage"
                 android:layout_width="180dp"
                 android:layout_height="180dp"
-                android:src="@drawable/basicleaf"
+                android:src="@drawable/basil"
                 android:contentDescription="Basil Leaf"
                 android:adjustViewBounds="true"
                 android:layout_marginTop="15dp"

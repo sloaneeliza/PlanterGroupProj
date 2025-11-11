@@ -46,6 +46,9 @@ lauren
 ================================================================
 What I did:
 - Fixed the layout of Recipes so they're not in a LinearLayout.
+- Added a functional back arrow.
+- Began adding complete functionalities to BayCard
+- Added BayCard to AndroidManifest
 
 Current issues:
 - Recipes is printed twice on the recipefragment card
