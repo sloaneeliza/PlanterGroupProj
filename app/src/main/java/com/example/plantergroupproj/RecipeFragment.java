@@ -33,15 +33,11 @@ public class RecipeFragment extends Fragment {
                              @Nullable Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_recipe, container, false);
-
         ListView listView = view.findViewById(R.id.recipeListView);
-
         String herb = getArguments() != null ? getArguments().getString(ARG_HERB) : "";
-
         List<Recipe> recipes = new ArrayList<>();
 
         switch (herb) {
-
             case "Basil":
                 recipes.add(new Recipe(
                         "Caprese Salad",
@@ -59,8 +55,25 @@ public class RecipeFragment extends Fragment {
                                 "4. Add salt and pepper to taste.",
                         R.drawable.caprese //image, must be in res/drawable folder
                 ));
-
-
+                recipes.add(new Recipe(
+                        "Walnut Pesto",
+                        "Serve on pasta or use as a dressing or marinade.",
+                        "Ingredients:\n" +
+                                "- 2 cups fresh basil leaves\n" +
+                                "- 1/2 cup walnuts\n" +
+                                "- 1/2 cup grated parmesan\n" +
+                                "- 2 cloves garlic\n" +
+                                "- 1/2 cup olive oil\n" +
+                                "- Salt & pepper\n\n" +
+                                "Instructions:\n" +
+                                "1. Add basil, walnuts, garlic, and parmesan to a food processor.\n" +
+                                "2. Pulse until chopped.\n" +
+                                "3. Slowly drizzle in olive oil.\n" +
+                                "4. Blend smooth.\n" +
+                                "5. Season to taste.",
+                        R.drawable.walnutpesto
+                ));
+                break;
             case "Mint":
 
                 break;
