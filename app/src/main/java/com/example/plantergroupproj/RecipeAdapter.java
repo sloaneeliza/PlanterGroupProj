@@ -13,7 +13,7 @@ import androidx.annotation.Nullable;
 import java.util.List;
 
 public class RecipeAdapter extends ArrayAdapter<Recipe> {
-
+//ignore this comment
     public RecipeAdapter(@NonNull Context context, @NonNull List<Recipe> recipes) {
         super(context, 0, recipes);
     }
