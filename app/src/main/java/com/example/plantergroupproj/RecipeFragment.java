@@ -75,6 +75,26 @@ public class RecipeFragment extends Fragment {
                                 "5. Season with salt and pepper to taste.",
                         R.drawable.walnutpesto
                 ));
+                recipes.add(new Recipe(
+                        "Basil Lemonade",
+                        "A refreshing twist on classic lemonade with the aromatic flavor of fresh basil.",
+                        "Ingredients:\n" +
+                                "- 1 cup fresh basil leaves\n" +
+                                "- 1 cup freshly squeezed lemon juice (about 4-6 lemons)\n" +
+                                "- ¾ cup sugar or honey\n" +
+                                "- 4 cups cold water\n" +
+                                "- Ice cubes\n" +
+                                "- Lemon slices and basil sprigs for garnish\n\n" +
+                                "Instructions:\n" +
+                                "1. In a small saucepan, combine 1 cup water, sugar, and basil leaves.\n" +
+                                "2. Heat over medium, stirring until sugar dissolves (about 5 minutes).\n" +
+                                "3. Remove from heat and let the basil steep for 15-20 minutes.\n" +
+                                "4. Strain the basil syrup into a pitcher, pressing on the leaves to extract flavor.\n" +
+                                "5. Add lemon juice and remaining 3 cups cold water.\n" +
+                                "6. Stir well and refrigerate until chilled.\n" +
+                                "7. Serve over ice, garnished with lemon slices and fresh basil.",
+                        R.drawable.lemonade
+                ));
                 break;
 
             case "Mint":
