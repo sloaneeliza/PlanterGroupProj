@@ -11,7 +11,7 @@ public class MintCard extends AppCompatActivity {
         setContentView(R.layout.activity_mint_card);
 
         getSupportFragmentManager().beginTransaction()
-                .replace(R.id.recipeFragment, RecipeFragment.newInstance("Mint"))
+                .replace(R.id.recipeContainer, RecipeFragment.newInstance("Mint"))
                 .commit();
     }
 }

@@ -11,7 +11,7 @@ public class ParsleyCard extends AppCompatActivity {
         setContentView(R.layout.activity_parsley_card);
 
         getSupportFragmentManager().beginTransaction()
-                .replace(R.id.recipeFragment, RecipeFragment.newInstance("Parsley"))
+                .replace(R.id.recipeContainer, RecipeFragment.newInstance("Parsley"))
                 .commit();
     }
 }

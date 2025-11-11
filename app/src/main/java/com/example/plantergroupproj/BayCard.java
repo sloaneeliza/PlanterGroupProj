@@ -11,7 +11,7 @@ public class BayCard extends AppCompatActivity {
         setContentView(R.layout.activity_bay_card);
 
         getSupportFragmentManager().beginTransaction()
-                .replace(R.id.recipeFragment, RecipeFragment.newInstance("Bay"))
+                .replace(R.id.recipeContainer, RecipeFragment.newInstance("Bay"))
                 .commit();
     }
 }

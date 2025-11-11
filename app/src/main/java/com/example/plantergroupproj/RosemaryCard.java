@@ -11,7 +11,7 @@ public class RosemaryCard extends AppCompatActivity {
         setContentView(R.layout.activity_rosemary_card);
 
         getSupportFragmentManager().beginTransaction()
-                .replace(R.id.recipeFragment, RecipeFragment.newInstance("Rosemary"))
+                .replace(R.id.recipeContainer, RecipeFragment.newInstance("Rosemary"))
                 .commit();
     }
 }

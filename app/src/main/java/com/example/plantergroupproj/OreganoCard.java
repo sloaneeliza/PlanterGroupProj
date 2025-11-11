@@ -11,7 +11,7 @@ public class OreganoCard extends AppCompatActivity {
         setContentView(R.layout.activity_oregano_card);
 
         getSupportFragmentManager().beginTransaction()
-                .replace(R.id.recipeFragment, RecipeFragment.newInstance("Oregano"))
+                .replace(R.id.recipeContainer, RecipeFragment.newInstance("Oregano"))
                 .commit();
     }
 }

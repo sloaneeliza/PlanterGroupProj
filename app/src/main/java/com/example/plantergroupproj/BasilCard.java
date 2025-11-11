@@ -4,14 +4,13 @@ import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class BasilCard extends AppCompatActivity {
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_basil_card);
-
+        RecipeFragment fragment = RecipeFragment.newInstance("Basil");
         getSupportFragmentManager().beginTransaction()
-                .replace(R.id.recipeFragment, RecipeFragment.newInstance("Basil"))
+                .replace(R.id.recipeContainer, fragment)
                 .commit();
     }
 }

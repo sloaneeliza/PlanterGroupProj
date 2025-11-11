@@ -11,7 +11,7 @@ public class ThymeCard extends AppCompatActivity {
         setContentView(R.layout.activity_thyme_card);
 
         getSupportFragmentManager().beginTransaction()
-                .replace(R.id.recipeFragment, RecipeFragment.newInstance("Thyme"))
+                .replace(R.id.recipeContainer, RecipeFragment.newInstance("Thyme"))
                 .commit();
     }
 }

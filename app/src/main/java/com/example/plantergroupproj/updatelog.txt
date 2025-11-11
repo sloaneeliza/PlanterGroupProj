@@ -42,3 +42,10 @@ Sloane Wright, November 10 9:08PM
 lauren
 - make the opening screens with name submit (see figma)
 - UI for all of them whenever
+
+================================================================
+What I did:
+- Fixed the layout of Recipes so they're not in a LinearLayout.
+
+Current issues:
+- Recipes is printed twice on the recipefragment card
