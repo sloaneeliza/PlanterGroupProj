@@ -17,3 +17,24 @@ Current issues:
 
 Sloane Wright, November 7 3:50PM
 ================================================================
+
+What I did:
+- Made it where the recipes under each herb has a simple
+  description. If the user taps on the description, it opens
+  a different page that has the full description and and an
+  image of the food.
+
+What needs to be added:
+- RecipeDetailActivity needs the "Save" button to be added. It
+  also needs a "Home" button and a back arrow to be added.
+- Additional recipes for Basil and our other recipes need to be added
+  as well in the RecipeFragment class. (these are being hardcoded)
+
+Current issues:
+- UI isn't identical to the UI in Figma, which I am just aiming for
+  functionality right now.
+- The word "Recipe" is being printed twice in our RecipeFragment. I
+  am unsure if this is an issue in the XML or in the Java file.
+
+Sloane Wright, November 10 9:08PM
+================================================================
