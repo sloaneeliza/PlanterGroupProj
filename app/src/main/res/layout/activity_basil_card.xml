@@ -10,22 +10,40 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <!-- Top Section (with padding) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="25dp"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp">
+
+            <ImageButton
+                android:id="@+id/backButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_arrow_back"
+                android:padding="8dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Back" />
+
+            <TextView
+                android:text="HOME"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center|end" />
+        </LinearLayout>
+
         <LinearLayout
             android:orientation="vertical"
             android:gravity="center_horizontal"
             android:padding="24dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:text="Home"
-                android:textStyle="bold"
-                android:textSize="14sp"
-                android:layout_gravity="end"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingBottom="16dp"/>
+            android:layout_height="wrap_content"
+            android:paddingTop="0dp">
 
             <ImageView
                 android:id="@+id/basilImage"
@@ -34,7 +52,7 @@
                 android:src="@drawable/basicleaf"
                 android:contentDescription="Basil Leaf"
                 android:adjustViewBounds="true"
-                android:layout_marginTop="75dp"
+                android:layout_marginTop="15dp"
                 android:layout_marginBottom="16dp"/>
 
             <TextView
@@ -63,7 +81,7 @@
             android:id="@+id/recipeFragment"
             android:name="com.example.plantergroupproj.RecipeFragment"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="8dp"/>
+            android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"/>
     </LinearLayout>
 </ScrollView>
