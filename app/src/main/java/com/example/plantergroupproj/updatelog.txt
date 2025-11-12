@@ -52,3 +52,9 @@ What I did:
 
 Current issues:
 - Recipes is printed twice on the recipefragment card
+Sloane Wright, November 11 3:30PM
+================================================================
+What I did:
+- Added a back arrow to the recipe cards
+
+Sloane Wright, November 12 3:25PM
