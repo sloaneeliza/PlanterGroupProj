@@ -1,6 +1,7 @@
 package com.example.plantergroupproj;
 
 import android.os.Bundle;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
@@ -18,7 +19,6 @@ public class RecipeDetailActivity extends AppCompatActivity {
 
         String recipeTitle = getIntent().getStringExtra("title");
         String recipeDesc = getIntent().getStringExtra("description");
-
         title.setText(recipeTitle);
         desc.setText(recipeDesc);
 
@@ -27,5 +27,9 @@ public class RecipeDetailActivity extends AppCompatActivity {
         if (imageResId != 0) {
             imgV.setImageResource(imageResId);
         }
+        ImageButton backButton = findViewById(R.id.backButton);
+        backButton.setOnClickListener(v -> {
+            finish();
+        });
     }
 }
