@@ -43,8 +43,8 @@
 
         <ImageView
             android:id="@+id/saveRecipeBtn"
-            android:layout_width="65dp"
-            android:layout_height="50dp"
+            android:layout_width="98dp"
+            android:layout_height="75dp"
             android:src="@drawable/savebox"
             android:contentDescription="Save Box"
             android:scaleType="centerCrop"

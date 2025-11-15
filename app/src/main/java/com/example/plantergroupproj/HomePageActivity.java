@@ -28,7 +28,6 @@ public class HomePageActivity extends AppCompatActivity {
         }
         SharedPreferences prefs = getSharedPreferences("AppPrefs", MODE_PRIVATE);
         String herb = prefs.getString("selectedHerb", null);
-        prefs.edit().clear().apply(); //prefs clear every launch
 
         selectHerbButton.setOnClickListener(v -> {
             Intent intent = new Intent(HomePageActivity.this, HerbSelection.class);
