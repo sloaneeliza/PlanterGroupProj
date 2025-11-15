@@ -16,9 +16,24 @@ public class WelcomeActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_welcome);
+
+        //If you want to start fresh
+        // with no shared preferences:
+        // Android Studio → Device Manager → ⋮ → Wipe Data
+        String name = UserPrefs.getName(this);
+
+        if (name != null && !name.isEmpty()) {
+            //user already set up, so go straight to Home
+            Intent intent = new Intent(WelcomeActivity.this, HomePageActivity.class);
+            startActivity(intent);
+            finish();
+            return;
+        } else{
+            setContentView(R.layout.activity_welcome);
+        }
 
         getStartedBtn = findViewById(R.id.getStartedBtn);
+
 
         getStartedBtn.setOnClickListener(new View.OnClickListener() {
             @Override
