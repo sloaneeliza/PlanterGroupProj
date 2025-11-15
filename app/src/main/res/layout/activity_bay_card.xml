@@ -58,9 +58,10 @@
             <TextView
                 android:id="@+id/bayTitle"
                 android:text="Bay"
+                android:fontFamily="serif"
                 android:textSize="28sp"
                 android:textStyle="bold"
-                android:textColor="#000000"
+                android:textColor="color`"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="12dp"/>
@@ -69,7 +70,8 @@
                 android:id="@+id/bayDescription"
                 android:text="Bay leaf is an aromatic dried herb added whole to soups, stews, sauces, and braises to infuse a subtle, savory, and floral depth, and is typically removed before the dish is served."
                 android:textSize="16sp"
-                android:textColor="#444444"
+                android:fontFamily="serif"
+                android:textColor="@color/black"
                 android:gravity="center"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

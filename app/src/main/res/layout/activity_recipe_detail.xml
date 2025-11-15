@@ -40,6 +40,26 @@
             android:lineSpacingExtra="6dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/saveRecipeBtn"
+            android:layout_width="65dp"
+            android:layout_height="50dp"
+            android:src="@drawable/savebox"
+            android:contentDescription="Save Box"
+            android:scaleType="centerCrop"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="25dp"/>
+
+        <TextView
+            android:id="@+id/saveText"
+            android:text="Save Recipe"
+            android:textSize="16sp"
+            android:layout_marginBottom="12dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
     </LinearLayout>
 
 </androidx.core.widget.NestedScrollView>

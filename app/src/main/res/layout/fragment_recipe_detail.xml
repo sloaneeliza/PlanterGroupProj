@@ -13,6 +13,8 @@
             android:id="@+id/recipeDetailTitle"
             android:textSize="24sp"
             android:textStyle="bold"
+            android:fontFamily="serif"
+            android:textColor="@color/black"
             android:layout_marginBottom="12dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
@@ -20,6 +22,8 @@
         <TextView
             android:id="@+id/recipeDetailDescription"
             android:textSize="16sp"
+            android:fontFamily="serif"
+            android:textColor="@color/black"
             android:lineSpacingExtra="6dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>

@@ -65,3 +65,18 @@ What I did:
 - Added Home Page
 - Made the person's name a SharedPreference so it could be accessed
   throughout the app
+
+Sloane Wright, November 14 10:30PM
+================================================================
+What I did:
+- Made all the fonts serif (with the exception of "HOME" label
+  to match Figma UI)
+- Added "Save Recipe" button to RecipeDetail
+- Made some UI adjustments
+
+What needs to be done:
+- Add functionality to Save Recipe button
+- Make the app where if the user has input their name before,
+  it doesn't make them go through the welcome page again
+
+Sloane Wright, November 15 4:00PM
