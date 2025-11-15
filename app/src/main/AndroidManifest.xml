@@ -11,17 +11,28 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PlanterGroupProj">
-
         <activity
-            android:name=".HerbSelection"
+            android:name=".HomePageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".NameActivity"
+            android:exported="false"
+            android:label="@string/title_activity_name"
+            android:theme="@style/Theme.PlanterGroupProj.NoActionBar" /> <!-- FIRST SCREEN -->
+        <activity
+            android:name=".WelcomeActivity"
             android:exported="true"
             android:theme="@style/Theme.PlanterGroupProj">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
+        </activity> <!-- Other screens -->
+        <activity
+            android:name=".HerbSelection"
+            android:exported="false"
+            android:theme="@style/Theme.PlanterGroupProj" />
         <activity
             android:name=".BasilCard"
             android:exported="false"
@@ -34,7 +45,6 @@
             android:name=".RecipeDetailActivity"
             android:exported="false"
             android:theme="@style/Theme.PlanterGroupProj" />
-
     </application>
 
 </manifest>

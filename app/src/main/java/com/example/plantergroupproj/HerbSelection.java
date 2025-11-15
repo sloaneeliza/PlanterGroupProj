@@ -1,6 +1,7 @@
 package com.example.plantergroupproj;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
@@ -35,6 +36,7 @@ public class HerbSelection extends AppCompatActivity {
         listView.setOnItemClickListener((parent, view, position, id) -> {
             String selectedHerb = herbs[position];
             Toast.makeText(this, "You chose: " + selectedHerb, Toast.LENGTH_SHORT).show();
+            saveHerbSelection(selectedHerb);
 
             //user selection
             if (selectedHerb.equals("Basil")) {
@@ -67,4 +69,12 @@ public class HerbSelection extends AppCompatActivity {
             }
         });
     }
+    public void saveHerbSelection(String herbName) {
+        SharedPreferences prefs = getSharedPreferences("AppPrefs", MODE_PRIVATE);
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putString("selectedHerb", herbName);
+        editor.putInt("lastWateredDay", 0);
+        editor.apply();
+    }
+
 }
