@@ -3,9 +3,12 @@ package com.example.plantergroupproj;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ImageButton;
+import android.widget.TextView;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 public class BasilCard extends AppCompatActivity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,5 +21,13 @@ public class BasilCard extends AppCompatActivity {
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.recipeContainer, fragment)
                 .commit();
+
+        TextView homeBtn = findViewById(R.id.homeButton);
+
+        homeBtn.setOnClickListener(v -> {
+            Intent intent = new Intent(BasilCard.this, HomePageActivity.class);
+            startActivity(intent);
+        });
+
     }
 }

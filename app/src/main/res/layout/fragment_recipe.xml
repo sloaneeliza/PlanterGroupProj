@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
-    android:background="#F5F5DC">
+    android:background="@color/beige_background">
 
     <LinearLayout
         android:id="@+id/recipeContainer"
