@@ -1,65 +1,104 @@
-<androidx.core.widget.NestedScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:padding="24dp"
     android:layout_height="match_parent"
-    android:background="#F5F5DC" >
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="24dp"
+    android:background="#FFFFFF">
 
-    <LinearLayout
-        android:orientation="vertical"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <ImageButton
             android:id="@+id/backButton"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:src="@drawable/ic_arrow_back"
+            android:background="@android:color/transparent"
             android:padding="8dp"
-            android:background="?attr/selectableItemBackgroundBorderless"
-            android:contentDescription="Back" />
+            android:contentDescription="Back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
 
-        <TextView
-            android:id="@+id/detailTitle"
-            android:textSize="26sp"
-            android:textStyle="bold"
-            android:layout_marginBottom="12dp"
-            android:layout_width="match_parent"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cardContainer"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"/>
+            android:padding="24dp"
+            android:background="@drawable/rounded_card"
+            app:layout_constraintTop_toBottomOf="@+id/backButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="24dp">
 
-        <ImageView
-            android:id="@+id/recipeImage"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:scaleType="centerCrop" />
+            <TextView
+                android:id="@+id/detailTitle"
+                android:layout_width="183dp"
+                android:layout_height="34dp"
+                android:fontFamily="serif"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toStartOf="@+id/recipeImage"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/detailDescription"
-            android:textSize="18sp"
-            android:lineSpacingExtra="6dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/detailShortDesc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginEnd="24dp"
+                android:textColor="#444444"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toStartOf="@+id/recipeImage"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/detailTitle" />
 
+            <ImageView
+                android:id="@+id/recipeImage"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView
+                android:id="@+id/detailDescription"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:lineSpacingExtra="6dp"
+                android:layout_marginTop="64dp"
+                app:layout_constraintTop_toBottomOf="@+id/recipeImage"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
         <ImageView
             android:id="@+id/saveRecipeBtn"
             android:layout_width="98dp"
             android:layout_height="75dp"
             android:src="@drawable/savebox"
             android:contentDescription="Save Box"
+            android:layout_marginTop="25dp"
             android:scaleType="centerCrop"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="25dp"/>
+            app:layout_constraintTop_toBottomOf="@+id/cardContainer"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
 
         <TextView
             android:id="@+id/saveText"
             android:text="Save Recipe"
             android:textSize="16sp"
-            android:layout_marginBottom="12dp"
-            android:layout_gravity="center_horizontal"
+            android:fontFamily="serif"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="12dp"
+            app:layout_constraintTop_toBottomOf="@+id/saveRecipeBtn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
 
-    </LinearLayout>
-
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>

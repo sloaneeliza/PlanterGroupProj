@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -151,12 +152,20 @@ public class RecipeFragment extends Fragment {
         View recipeItemView = inflater.inflate(R.layout.item_recipe, parent, false);
         TextView title = recipeItemView.findViewById(R.id.recipeTitle);
         TextView description = recipeItemView.findViewById(R.id.recipeDesc);
+        ImageView image = recipeItemView.findViewById(R.id.recipeImage);
+
         title.setText(recipe.getTitle());
         description.setText(recipe.getShortDescription());
+
+        if (recipe.getImageResId() != 0) {
+            image.setImageResource(recipe.getImageResId());
+        }
+
         recipeItemView.setOnClickListener(v -> {
             Intent intent = new Intent(requireContext(), RecipeDetailActivity.class);
             intent.putExtra("title", recipe.getTitle());
             intent.putExtra("imageResId", recipe.getImageResId());
+            intent.putExtra("shortDesc", recipe.getShortDescription());
             intent.putExtra("description", recipe.getFullDescription());
             startActivity(intent);
         });

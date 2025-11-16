@@ -28,6 +28,24 @@ public class BasilCard extends AppCompatActivity {
             Intent intent = new Intent(BasilCard.this, HomePageActivity.class);
             startActivity(intent);
         });
+        TextView saveHerbBtn = findViewById(R.id.saveHerbBtn);
+
+        saveHerbBtn.setOnClickListener(v -> {
+            saveHerb("Basil");
+        });
 
     }
+
+    private void saveHerb(String herbName) {
+        android.content.SharedPreferences prefs = getSharedPreferences("MyHerbs", MODE_PRIVATE);
+        android.content.SharedPreferences.Editor editor = prefs.edit();
+
+        java.util.Set<String> savedHerbs = prefs.getStringSet("savedHerbs", new java.util.HashSet<>());
+        savedHerbs.add(herbName);
+
+        editor.putStringSet("savedHerbs", savedHerbs);
+        editor.apply();
+        android.widget.Toast.makeText(this, herbName + " saved!", android.widget.Toast.LENGTH_SHORT).show();
+    }
+
 }

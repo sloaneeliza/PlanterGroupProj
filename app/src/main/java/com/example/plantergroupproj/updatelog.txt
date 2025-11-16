@@ -82,3 +82,12 @@ What needs to be done:
   it doesn't make them go through the welcome page again
 
 Sloane Wright, November 15 4:00PM
+================================================================
+
+What I did:
+- Fixed a bunch of UI components that were messed up
+- Made home page dynamic
+- Created Planter card fragment
+- Added a working Save Recipes system
+
+Sloane Wright, November 16, 5:42PM

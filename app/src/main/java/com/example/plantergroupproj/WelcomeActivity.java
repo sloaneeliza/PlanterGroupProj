@@ -33,8 +33,6 @@ public class WelcomeActivity extends AppCompatActivity {
         }
 
         getStartedBtn = findViewById(R.id.getStartedBtn);
-
-
         getStartedBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

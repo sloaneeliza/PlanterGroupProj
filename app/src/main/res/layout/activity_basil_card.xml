@@ -39,8 +39,7 @@
                 android:clickable="true"
                 android:focusable="true"
                 android:padding="8dp"
-                android:textColor="#000000"
-                android:background="?attr/selectableItemBackgroundBorderless"/>
+                android:textColor="#000000"/>
 
         </LinearLayout>
 
@@ -84,6 +83,20 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="12dp"
                 android:layout_marginBottom="24dp"/>
+
+            <TextView
+                android:id="@+id/saveHerbBtn"
+                android:text="SAVE HERB"
+                android:textStyle="bold"
+                android:fontFamily="serif"
+                android:textSize="14sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="8dp"
+                android:textColor="#000000"/>
         </LinearLayout>
 
         <fragment
