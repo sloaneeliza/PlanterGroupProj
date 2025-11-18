@@ -13,12 +13,18 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class RecipeFragment extends Fragment {
 
     private static final String ARG_HERB = "herb";
+    DatabaseReference database;
+
+    // database
 
     public static RecipeFragment newInstance(String herb) {
         RecipeFragment fragment = new RecipeFragment();
@@ -38,7 +44,14 @@ public class RecipeFragment extends Fragment {
         LinearLayout recipesContainer = view.findViewById(R.id.recipeContainer);
         String herb = getArguments() != null ? getArguments().getString(ARG_HERB) : "";
 
+        DatabaseReference recipesRef =
+                FirebaseDatabase.getInstance().getReference("recipes");
+        // path for recipes with all the info as children
+
         List<Recipe> recipes = new ArrayList<>();
+
+        Recipe BasilLemonade = new Recipe();
+        Recipe CapreseSalad = new Recipe();
 
         switch (herb) {
             case "Basil":
@@ -130,7 +143,10 @@ public class RecipeFragment extends Fragment {
                                 "- Stew tastes even better the next day as flavors meld",
                         R.drawable.beef_stew
                 ));
-                recipes.add(new Recipe("", "", "", R.drawable.basicleaf
+                recipes.add(new Recipe("Bay Leaf Pound Cake Recipe",
+                        "An incredibly moist and fragrant bay leaf pound cake from David Lebovitz's new cookbook. ",
+                        "",
+                        R.drawable.basicleaf
                 ));
                 recipes.add(new Recipe("", "", "", R.drawable.basicleaf
                 ));
@@ -185,6 +201,9 @@ public class RecipeFragment extends Fragment {
                 break;
 
         }
+
+        recipesRef.push().setValue(BasilLemonade);
+        recipesRef.push().setValue(CapreseSalad);
 
         //add each recipe to the container
         for (Recipe recipe : recipes) {
