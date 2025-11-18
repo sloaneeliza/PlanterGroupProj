@@ -1,6 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <TextView
+        android:id="@+id/homeButtonMint"
+        android:layout_width="194dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center|end"
+        android:padding="8dp"
+        android:text="HOME"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="188dp"
+        tools:layout_editor_absoluteY="29dp" />
+
+    <fragment
+        android:id="@+id/recipeFragmentMint"
+        android:name="com.example.plantergroupproj.RecipeFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="572dp" />
+
+    <ImageButton
+        android:id="@+id/backButtonMint"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Back"
+        android:padding="8dp"
+        android:src="@drawable/ic_arrow_back"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <TextView
+        android:id="@+id/saveHerbBtn2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:fontFamily="serif"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="SAVE HERB"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="513dp" />
+
+    <TextView
+        android:id="@+id/basilDescription2"
+        android:layout_width="330dp"
+        android:layout_height="98dp"
+        android:layout_marginHorizontal="12dp"
+        android:fontFamily="serif"
+        android:gravity="center"
+        android:text="A bright, cooling herb, mint adds a refreshing lift to drinks, desserts, salads, and lamb. Perfect for summer recipes and anything that needs a crisp, clean finish."
+        android:textColor="#000000"
+        android:textSize="16sp"
+        tools:layout_editor_absoluteX="40dp"
+        tools:layout_editor_absoluteY="403dp" />
+
+    <TextView
+        android:id="@+id/mintTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif"
+        android:text="Mint"
+        android:textColor="#000000"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="172dp"
+        tools:layout_editor_absoluteY="365dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="151dp"
+        android:layout_height="266dp"
+        app:srcCompat="@drawable/mint"
+        tools:layout_editor_absoluteX="130dp"
+        tools:layout_editor_absoluteY="110dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -19,7 +19,7 @@
             android:layout_marginBottom="16dp">
 
             <ImageButton
-                android:id="@+id/backButton"
+                android:id="@+id/backButtonBasil"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
                 android:src="@drawable/ic_arrow_back"
@@ -80,7 +80,7 @@
         </LinearLayout>
 
         <fragment
-            android:id="@+id/recipeFragment"
+            android:id="@+id/recipeFragmentBasil"
             android:name="com.example.plantergroupproj.RecipeFragment"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

@@ -26,7 +26,7 @@ public class HerbSelection extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_herb_selection);
 
-        ImageButton backButton = findViewById(R.id.backButton);
+        ImageButton backButton = findViewById(R.id.backButtonBasil);
         backButton.setOnClickListener(v -> {
             finish();
         });
