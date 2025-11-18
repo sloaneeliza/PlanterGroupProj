@@ -130,14 +130,60 @@ public class RecipeFragment extends Fragment {
                                 "- Stew tastes even better the next day as flavors meld",
                         R.drawable.beef_stew
                 ));
+                recipes.add(new Recipe("", "", "", R.drawable.basicleaf
+                ));
+                recipes.add(new Recipe("", "", "", R.drawable.basicleaf
+                ));
                 break;
             case "Mint":
                 // Add mint recipes here
+                recipes.add(new Recipe("", "", "", R.drawable.basicleaf
+                ));
+                recipes.add(new Recipe("", "", "", R.drawable.basicleaf
+                ));
+                recipes.add(new Recipe("", "", "", R.drawable.basicleaf
+                ));
                 break;
 
+            case "Oregano":
+                // Add rosemary recipes here
+                recipes.add(new Recipe("", "", "", R.drawable.basicleaf
+                ));
+                recipes.add(new Recipe("", "", "", R.drawable.basicleaf
+                ));
+                recipes.add(new Recipe("", "", "", R.drawable.basicleaf
+                ));
+                break;
+
+            case "Parsley":
+                // Add mint recipes here
+                recipes.add(new Recipe("", "", "", R.drawable.basicleaf
+                ));
+                recipes.add(new Recipe("", "", "", R.drawable.basicleaf
+                ));
+                recipes.add(new Recipe("", "", "", R.drawable.basicleaf
+                ));
+                break;
+
+            case "Thyme":
+                // Add rosemary recipes here
+                recipes.add(new Recipe("", "", "", R.drawable.basicleaf
+                ));
+                recipes.add(new Recipe("", "", "", R.drawable.basicleaf
+                ));
+                recipes.add(new Recipe("", "", "", R.drawable.basicleaf
+                ));
+                break;
             case "Rosemary":
                 // Add rosemary recipes here
+                recipes.add(new Recipe("", "", "", R.drawable.basicleaf
+                ));
+                recipes.add(new Recipe("", "", "", R.drawable.basicleaf
+                ));
+                recipes.add(new Recipe("", "", "", R.drawable.basicleaf
+                ));
                 break;
+
         }
 
         //add each recipe to the container

@@ -40,8 +40,9 @@ Sloane Wright, November 10 9:08PM
 ================================================================
 
 lauren
-- make the opening screens with name submit (see figma)
+- make the opening screens with name submit (see figma)- photos
 - UI for all of them whenever
+-
 
 ================================================================
 What I did:
