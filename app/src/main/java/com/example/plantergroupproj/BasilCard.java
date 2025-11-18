@@ -13,7 +13,7 @@ public class BasilCard extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_basil_card);
-        ImageButton backButton = findViewById(R.id.backButtonBasil);
+        ImageButton backButton = findViewById(R.id.backBtnBasil);
         backButton.setOnClickListener(v -> {
             finish();
         });
@@ -22,13 +22,13 @@ public class BasilCard extends AppCompatActivity {
                 .replace(R.id.recipeContainer, fragment)
                 .commit();
 
-        TextView homeBtn = findViewById(R.id.homeButtonBasil);
+        TextView homeBtn = findViewById(R.id.homeBtnBasil);
 
         homeBtn.setOnClickListener(v -> {
             Intent intent = new Intent(BasilCard.this, HomePageActivity.class);
             startActivity(intent);
         });
-        TextView saveHerbBtn = findViewById(R.id.saveHerbBtn);
+        TextView saveHerbBtn = findViewById(R.id.saveBasilBtn);
 
         saveHerbBtn.setOnClickListener(v -> {
             saveHerb("Basil");

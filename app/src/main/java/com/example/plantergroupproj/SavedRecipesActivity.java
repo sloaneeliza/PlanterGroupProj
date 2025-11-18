@@ -27,7 +27,7 @@ public class SavedRecipesActivity extends AppCompatActivity {
         recipeContainer = findViewById(R.id.savedRecipeContainer);
         emptyMessage = findViewById(R.id.emptyMessage);
 
-        ImageButton backButton = findViewById(R.id.backButtonBasil);
+        ImageButton backButton = findViewById(R.id.backBtnBasil);
         backButton.setOnClickListener(v -> finish());
 
         loadSavedRecipes();

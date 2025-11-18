@@ -9,7 +9,7 @@ public class BayCard extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bay_card);
-        ImageButton backButton = findViewById(R.id.backButtonBasil);
+        ImageButton backButton = findViewById(R.id.backBtnBasil);
         backButton.setOnClickListener(v -> {
             finish();
         });

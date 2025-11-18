@@ -19,7 +19,7 @@
             android:layout_marginBottom="16dp">
 
             <ImageButton
-                android:id="@+id/backButtonBasil"
+                android:id="@+id/backBtnBasil"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
                 android:src="@drawable/ic_arrow_back"
@@ -28,7 +28,7 @@
                 android:contentDescription="Back" />
 
             <TextView
-                android:id="@+id/homeButtonBasil"
+                android:id="@+id/homeBtnBasil"
                 android:layout_width="194dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -85,7 +85,7 @@
                 android:layout_marginBottom="24dp"/>
 
             <TextView
-                android:id="@+id/saveHerbBtn"
+                android:id="@+id/saveBasilBtn"
                 android:text="SAVE HERB"
                 android:textStyle="bold"
                 android:fontFamily="serif"

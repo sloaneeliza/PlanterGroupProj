@@ -39,7 +39,7 @@ public class RecipeDetailActivity extends AppCompatActivity {
         if (imageResId != 0) {
             imgV.setImageResource(imageResId);
         }
-        ImageButton backButton = findViewById(R.id.backButtonBasil);
+        ImageButton backButton = findViewById(R.id.backBtnBasil);
         backButton.setOnClickListener(v -> {
             finish();
         });
