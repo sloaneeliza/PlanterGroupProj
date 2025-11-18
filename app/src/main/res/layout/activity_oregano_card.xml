@@ -56,7 +56,7 @@
         tools:layout_editor_absoluteY="361dp" />
 
     <ImageButton
-        android:id="@+id/backButtonBasil2"
+        android:id="@+id/backBtnOregano"
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:background="?attr/selectableItemBackgroundBorderless"
