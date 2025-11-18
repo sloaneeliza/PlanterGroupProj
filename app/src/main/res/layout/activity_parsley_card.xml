@@ -11,7 +11,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         tools:layout_editor_absoluteX="25dp"
-        tools:layout_editor_absoluteY="560dp" />
+        tools:layout_editor_absoluteY="560dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/saveParsleyBtn"

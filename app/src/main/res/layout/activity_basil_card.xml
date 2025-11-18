@@ -25,18 +25,18 @@
                 android:src="@drawable/ic_arrow_back"
                 android:padding="8dp"
                 android:background="?attr/selectableItemBackgroundBorderless"
-                android:contentDescription="Back" />
+                android:contentDescription="@string/back" />
 
             <TextView
                 android:id="@+id/homeBtnBasil"
-                android:layout_width="194dp"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:clickable="true"
                 android:focusable="true"
                 android:gravity="center|end"
                 android:padding="8dp"
-                android:text="HOME"
+                android:text="@string/home"
                 android:textColor="#000000"
                 android:textSize="14sp"
                 android:textStyle="bold" />
@@ -56,14 +56,14 @@
                 android:layout_width="180dp"
                 android:layout_height="180dp"
                 android:src="@drawable/basil"
-                android:contentDescription="Basil Leaf"
+                android:contentDescription="@string/basil_leaf"
                 android:adjustViewBounds="true"
                 android:layout_marginTop="15dp"
                 android:layout_marginBottom="16dp"/>
 
             <TextView
                 android:id="@+id/basilTitle"
-                android:text="Basil"
+                android:text="@string/basil"
                 android:textSize="28sp"
                 android:textStyle="bold"
                 android:textColor="#000000"
@@ -74,7 +74,7 @@
 
             <TextView
                 android:id="@+id/basilDescription"
-                android:text="A favorite summer aromatic, basil pairs well with fresh tomatoes, parmesan, chicken and shrimp."
+                android:text="@string/a_favorite_summer_aromatic_basil_pairs_well_with_fresh_tomatoes_parmesan_chicken_and_shrimp"
                 android:textSize="16sp"
                 android:textColor="#000000"
                 android:fontFamily="serif"
@@ -86,7 +86,7 @@
 
             <TextView
                 android:id="@+id/saveBasilBtn"
-                android:text="SAVE HERB"
+                android:text="@string/save_herb"
                 android:textStyle="bold"
                 android:fontFamily="serif"
                 android:textSize="14sp"

@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/oreganoTitle"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:ignore="DuplicateIds">
 
     <fragment
         android:id="@+id/recipeFragmentOregano"
@@ -12,7 +13,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         tools:layout_editor_absoluteX="25dp"
-        tools:layout_editor_absoluteY="560dp" />
+        tools:layout_editor_absoluteY="560dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/saveOreganoBtn"
@@ -23,12 +25,13 @@
         android:fontFamily="serif"
         android:gravity="center"
         android:padding="8dp"
-        android:text="SAVE HERB"
+        android:text="@string/save_herbOregano"
         android:textColor="#000000"
         android:textSize="14sp"
         android:textStyle="bold"
         tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="506dp" />
+        tools:layout_editor_absoluteY="506dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/oreganoDescription"
@@ -37,34 +40,37 @@
         android:layout_marginHorizontal="12dp"
         android:fontFamily="serif"
         android:gravity="center"
-        android:text="A pungent, slightly bitter, and peppery herb, essential for seasoning classic Mediterranean and Mexican dishes like pizza sauce, grilled meats, and chili."
+        android:text="@string/a_pungent_slightly_bitter_and_peppery_herb_essential_for_seasoning_classic_mediterranean_and_mexican_dishes_like_pizza_sauce_grilled_meats_and_chili"
         android:textColor="#000000"
         android:textSize="16sp"
         tools:layout_editor_absoluteX="25dp"
-        tools:layout_editor_absoluteY="407dp" />
+        tools:layout_editor_absoluteY="407dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/oreganoTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="serif"
-        android:text="Oregano"
+        android:text="@string/oregano"
         android:textColor="#000000"
         android:textSize="28sp"
         android:textStyle="bold"
         tools:layout_editor_absoluteX="145dp"
-        tools:layout_editor_absoluteY="361dp" />
+        tools:layout_editor_absoluteY="361dp"
+        tools:ignore="MissingConstraints" />
 
     <ImageButton
         android:id="@+id/backBtnOregano"
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:background="?attr/selectableItemBackgroundBorderless"
-        android:contentDescription="Back"
+        android:contentDescription="@string/backOregano"
         android:padding="8dp"
         android:src="@drawable/ic_arrow_back"
         tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="29dp" />
+        tools:layout_editor_absoluteY="29dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/homeBtnOregano"
@@ -75,12 +81,13 @@
         android:focusable="true"
         android:gravity="center|end"
         android:padding="8dp"
-        android:text="HOME"
+        android:text="@string/homeOregano"
         android:textColor="#000000"
         android:textSize="14sp"
         android:textStyle="bold"
         tools:layout_editor_absoluteX="185dp"
-        tools:layout_editor_absoluteY="42dp" />
+        tools:layout_editor_absoluteY="42dp"
+        tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/oreganoImage"
@@ -88,5 +95,6 @@
         android:layout_height="252dp"
         app:srcCompat="@drawable/oregano"
         tools:layout_editor_absoluteX="116dp"
-        tools:layout_editor_absoluteY="109dp" />
+        tools:layout_editor_absoluteY="109dp"
+        tools:ignore="ContentDescription,MissingConstraints" />
 </androidx.constraintlayout.widget.ConstraintLayout>

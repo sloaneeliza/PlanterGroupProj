@@ -25,10 +25,10 @@
                 android:src="@drawable/ic_arrow_back"
                 android:padding="8dp"
                 android:background="?attr/selectableItemBackgroundBorderless"
-                android:contentDescription="Back" />
+                android:contentDescription="@string/backBay" />
 
             <TextView
-                android:text="HOME"
+                android:text="@string/homeBay"
                 android:textStyle="bold"
                 android:textSize="14sp"
                 android:layout_width="0dp"
@@ -50,14 +50,14 @@
                 android:layout_width="180dp"
                 android:layout_height="180dp"
                 android:src="@drawable/bay"
-                android:contentDescription="BayLeaf"
+                android:contentDescription="@string/bayleaf"
                 android:adjustViewBounds="true"
                 android:layout_marginTop="15dp"
                 android:layout_marginBottom="16dp"/>
 
             <TextView
                 android:id="@+id/bayTitle"
-                android:text="Bay"
+                android:text="@string/bay"
                 android:fontFamily="serif"
                 android:textSize="28sp"
                 android:textStyle="bold"
@@ -68,7 +68,7 @@
 
             <TextView
                 android:id="@+id/bayDescription"
-                android:text="Bay leaf is an aromatic dried herb added whole to soups, stews, sauces, and braises to infuse a subtle, savory, and floral depth, and is typically removed before the dish is served."
+                android:text="@string/bay_leaf_is_an_aromatic_dried_herb_added_whole_to_soups_stews_sauces_and_braises_to_infuse_a_subtle_savory_and_floral_depth_and_is_typically_removed_before_the_dish_is_served"
                 android:textSize="16sp"
                 android:fontFamily="serif"
                 android:textColor="#000000"

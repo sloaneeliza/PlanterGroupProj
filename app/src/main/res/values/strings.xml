@@ -135,4 +135,25 @@
         "when a user tries to pick up one of cards.\n\n"
     </string>
     <string name="action_settings">Settings</string>
+    <string name="back">Back</string>
+    <string name="home">HOME</string>
+    <string name="basil_leaf">Basil Leaf</string>
+    <string name="basil">Basil</string>
+    <string name="a_favorite_summer_aromatic_basil_pairs_well_with_fresh_tomatoes_parmesan_chicken_and_shrimp">A favorite summer aromatic, basil pairs well with fresh tomatoes, parmesan, chicken and shrimp.</string>
+    <string name="save_herb">SAVE HERB</string>
+    <string name="backBay">Back</string>
+    <string name="homeBay">HOME</string>
+    <string name="bayleaf">BayLeaf</string>
+    <string name="bay">Bay</string>
+    <string name="bay_leaf_is_an_aromatic_dried_herb_added_whole_to_soups_stews_sauces_and_braises_to_infuse_a_subtle_savory_and_floral_depth_and_is_typically_removed_before_the_dish_is_served">Bay leaf is an aromatic dried herb added whole to soups, stews, sauces, and braises to infuse a subtle, savory, and floral depth, and is typically removed before the dish is served.</string>
+    <string name="homeMint">HOME</string>
+    <string name="backMint">Back</string>
+    <string name="save_herbMint">SAVE HERB</string>
+    <string name="a_bright_cooling_herb_mint_adds_a_refreshing_lift_to_drinks_desserts_salads_and_lamb_perfect_for_summer_recipes_and_anything_that_needs_a_crisp_clean_finish">A bright, cooling herb, mint adds a refreshing lift to drinks, desserts, salads, and lamb. Perfect for summer recipes and anything that needs a crisp, clean finish.</string>
+    <string name="mint">Mint</string>
+    <string name="save_herbOregano">SAVE HERB</string>
+    <string name="a_pungent_slightly_bitter_and_peppery_herb_essential_for_seasoning_classic_mediterranean_and_mexican_dishes_like_pizza_sauce_grilled_meats_and_chili">A pungent, slightly bitter, and peppery herb, essential for seasoning classic Mediterranean and Mexican dishes like pizza sauce, grilled meats, and chili.</string>
+    <string name="oregano">Oregano</string>
+    <string name="backOregano">Back</string>
+    <string name="homeOregano">HOME</string>
 </resources>

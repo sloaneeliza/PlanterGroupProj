@@ -14,12 +14,13 @@
         android:focusable="true"
         android:gravity="center|end"
         android:padding="8dp"
-        android:text="HOME"
+        android:text="@string/homeMint"
         android:textColor="#000000"
         android:textSize="14sp"
         android:textStyle="bold"
         tools:layout_editor_absoluteX="188dp"
-        tools:layout_editor_absoluteY="29dp" />
+        tools:layout_editor_absoluteY="29dp"
+        tools:ignore="MissingConstraints" />
 
     <fragment
         android:id="@+id/recipeFragmentMint"
@@ -27,18 +28,20 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="572dp" />
+        tools:layout_editor_absoluteY="572dp"
+        tools:ignore="MissingConstraints" />
 
     <ImageButton
         android:id="@+id/backButtonMint"
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:background="?attr/selectableItemBackgroundBorderless"
-        android:contentDescription="Back"
+        android:contentDescription="@string/backMint"
         android:padding="8dp"
         android:src="@drawable/ic_arrow_back"
         tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="16dp" />
+        tools:layout_editor_absoluteY="16dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/saveMintBtn"
@@ -49,12 +52,13 @@
         android:fontFamily="serif"
         android:gravity="center"
         android:padding="8dp"
-        android:text="SAVE HERB"
+        android:text="@string/save_herbMint"
         android:textColor="#000000"
         android:textSize="14sp"
         android:textStyle="bold"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="513dp" />
+        tools:layout_editor_absoluteY="513dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/mintDescription"
@@ -63,23 +67,25 @@
         android:layout_marginHorizontal="12dp"
         android:fontFamily="serif"
         android:gravity="center"
-        android:text="A bright, cooling herb, mint adds a refreshing lift to drinks, desserts, salads, and lamb. Perfect for summer recipes and anything that needs a crisp, clean finish."
+        android:text="@string/a_bright_cooling_herb_mint_adds_a_refreshing_lift_to_drinks_desserts_salads_and_lamb_perfect_for_summer_recipes_and_anything_that_needs_a_crisp_clean_finish"
         android:textColor="#000000"
         android:textSize="16sp"
         tools:layout_editor_absoluteX="40dp"
-        tools:layout_editor_absoluteY="403dp" />
+        tools:layout_editor_absoluteY="403dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/mintTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="serif"
-        android:text="Mint"
+        android:text="@string/mint"
         android:textColor="#000000"
         android:textSize="28sp"
         android:textStyle="bold"
         tools:layout_editor_absoluteX="172dp"
-        tools:layout_editor_absoluteY="365dp" />
+        tools:layout_editor_absoluteY="365dp"
+        tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/mintImage"
@@ -87,5 +93,6 @@
         android:layout_height="266dp"
         app:srcCompat="@drawable/mint"
         tools:layout_editor_absoluteX="130dp"
-        tools:layout_editor_absoluteY="110dp" />
+        tools:layout_editor_absoluteY="110dp"
+        tools:ignore="MissingConstraints" />
 </androidx.constraintlayout.widget.ConstraintLayout>
