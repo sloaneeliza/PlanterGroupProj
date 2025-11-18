@@ -83,9 +83,9 @@
 
     <ImageView
         android:id="@+id/parsleyImage"
-        android:layout_width="176dp"
-        android:layout_height="221dp"
+        android:layout_width="228dp"
+        android:layout_height="262dp"
         app:srcCompat="@drawable/parsley"
-        tools:layout_editor_absoluteX="117dp"
-        tools:layout_editor_absoluteY="126dp" />
+        tools:layout_editor_absoluteX="91dp"
+        tools:layout_editor_absoluteY="73dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
