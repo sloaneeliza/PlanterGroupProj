@@ -11,6 +11,7 @@ import androidx.fragment.app.Fragment;
 
 public class RecipeDetailFragment extends Fragment {
 
+    // on main thing where you scroll down and its basil
     public static RecipeDetailFragment newInstance(String title, String description) {
         RecipeDetailFragment fragment = new RecipeDetailFragment();
         Bundle args = new Bundle();
