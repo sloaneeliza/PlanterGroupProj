@@ -19,7 +19,7 @@
             android:layout_marginBottom="16dp">
 
             <ImageButton
-                android:id="@+id/backButton"
+                android:id="@+id/backButtonBasil"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
                 android:src="@drawable/ic_arrow_back"
@@ -28,18 +28,18 @@
                 android:contentDescription="Back" />
 
             <TextView
-                android:id="@+id/homeButton"
-                android:text="HOME"
-                android:textStyle="bold"
-                android:textSize="14sp"
-                android:layout_width="0dp"
+                android:id="@+id/homeButtonBasil"
+                android:layout_width="194dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:gravity="center|end"
                 android:clickable="true"
                 android:focusable="true"
+                android:gravity="center|end"
                 android:padding="8dp"
-                android:textColor="#000000"/>
+                android:text="HOME"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                android:textStyle="bold" />
 
         </LinearLayout>
 
@@ -100,7 +100,7 @@
         </LinearLayout>
 
         <fragment
-            android:id="@+id/recipeFragment"
+            android:id="@+id/recipeFragmentBasil"
             android:name="com.example.plantergroupproj.RecipeFragment"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
