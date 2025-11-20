@@ -9,9 +9,14 @@ import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
 
+import android.app.Application;
+import com.google.firebase.FirebaseApp;
+
 public class RecipeDetailFragment extends Fragment {
 
     // on main thing where you scroll down and its basil
+
+
     public static RecipeDetailFragment newInstance(String title, String description) {
         RecipeDetailFragment fragment = new RecipeDetailFragment();
         Bundle args = new Bundle();
