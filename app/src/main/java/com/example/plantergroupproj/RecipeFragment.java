@@ -44,6 +44,8 @@ public class RecipeFragment extends Fragment {
         LinearLayout recipesContainer = view.findViewById(R.id.recipeContainer);
         String herb = getArguments() != null ? getArguments().getString(ARG_HERB) : "";
 
+
+
         DatabaseReference recipesRef =
                 FirebaseDatabase.getInstance().getReference("recipes");
         // path for recipes with all the info as children
