@@ -44,12 +44,12 @@
             android:theme="@style/Theme.PlanterGroupProj" />
 
         <activity
-            android:name=".BayCard"
+            android:name=".ParsleyCard"
             android:exported="false"
             android:theme="@style/Theme.PlanterGroupProj" />
 
         <activity
-            android:name=".ParsleyCard"
+            android:name=".BayCard"
             android:exported="false"
             android:theme="@style/Theme.PlanterGroupProj" />
 
