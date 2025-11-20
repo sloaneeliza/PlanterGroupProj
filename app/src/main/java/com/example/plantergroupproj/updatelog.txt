@@ -69,6 +69,10 @@ What I did:
 
 Sloane Wright, November 14 10:30PM
 ================================================================
+
+- lauren
+fixing the recipes and UI
+================================================================
 What I did:
 - Made all the fonts serif (with the exception of "HOME" label
   to match Figma UI)
@@ -92,3 +96,15 @@ What I did:
 - Added a working Save Recipes system
 
 Sloane Wright, November 16, 5:42PM
+================================================================
+
+
+lauren
+did the firebase but rolled back everything bc it was so messed up
+retrying later
+xml error stopping me now
+================================================================
+
+lauren
+fixed some UI and errors in XML,fixing the firebase and moving stuff into it still
+================================================================
