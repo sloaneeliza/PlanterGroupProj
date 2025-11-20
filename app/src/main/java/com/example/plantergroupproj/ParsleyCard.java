@@ -1,6 +1,5 @@
 package com.example.plantergroupproj;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ImageButton;
@@ -9,6 +8,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class ParsleyCard extends AppCompatActivity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,20 +31,21 @@ public class ParsleyCard extends AppCompatActivity {
         TextView saveHerbBtn = findViewById(R.id.saveParsleyBtn);
 
         saveHerbBtn.setOnClickListener(v -> {
-            saveHerb();
+            saveHerb("Parsley");
         });
 
     }
-    @SuppressLint("MutatingSharedPrefs")
-    private void saveHerb() {
+
+    private void saveHerb(String herbName) {
         android.content.SharedPreferences prefs = getSharedPreferences("MyHerbs", MODE_PRIVATE);
         android.content.SharedPreferences.Editor editor = prefs.edit();
 
         java.util.Set<String> savedHerbs = prefs.getStringSet("savedHerbs", new java.util.HashSet<>());
-        savedHerbs.add("Parsley");
+        savedHerbs.add(herbName);
 
         editor.putStringSet("savedHerbs", savedHerbs);
         editor.apply();
-        android.widget.Toast.makeText(this, "Parsley" + " saved!", android.widget.Toast.LENGTH_SHORT).show();
+        android.widget.Toast.makeText(this, herbName + " saved!", android.widget.Toast.LENGTH_SHORT).show();
     }
+
 }

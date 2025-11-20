@@ -22,7 +22,6 @@ public class RecipeAdapter extends ArrayAdapter<Recipe> {
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-
         if (convertView == null) {
             convertView = LayoutInflater.from(getContext())
                     .inflate(R.layout.item_recipe, parent, false);
