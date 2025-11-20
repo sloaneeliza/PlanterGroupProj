@@ -162,4 +162,7 @@
     <string name="home_parsley">HOME</string>
     <string name="back_parsley">Back</string>
     <string name="mintTitle">mintTitle</string>
+    <string name="rosemaryImage">rosemaryImage</string>
+    <string name="rosemaryTitle">rosemaryTitle</string>
+    <string name="a_highly_fragrant_piney_and_woodsy_herb_with_needle_like_leaves_perfect_for_complementing_savory_dishes_like_roasted_lamb_chicken_potatoes_and_breads">A highly fragrant, piney, and woodsy herb with needle-like leaves, perfect for complementing savory dishes like roasted lamb, chicken, potatoes, and breads.</string>
 </resources>
