@@ -165,4 +165,8 @@
     <string name="rosemaryImage">rosemaryImage</string>
     <string name="rosemaryTitle">rosemaryTitle</string>
     <string name="a_highly_fragrant_piney_and_woodsy_herb_with_needle_like_leaves_perfect_for_complementing_savory_dishes_like_roasted_lamb_chicken_potatoes_and_breads">A highly fragrant, piney, and woodsy herb with needle-like leaves, perfect for complementing savory dishes like roasted lamb, chicken, potatoes, and breads.</string>
+    <string name="a_delicate_earthy_and_slightly_floral_herb_that_pairs_wonderfully_with_poultry_root_vegetables_mushrooms_and_slow_cooked_dishes_like_stews_and_stocks">A delicate, earthy, and slightly floral herb that pairs wonderfully with poultry, root vegetables, mushrooms, and slow-cooked dishes like stews and stocks.</string>
+    <string name="thyme">thymeTitle</string>
+    <string name="thyme_image">thyme_image</string>
+    <string name="thyme_title">Thyme</string>
 </resources>
