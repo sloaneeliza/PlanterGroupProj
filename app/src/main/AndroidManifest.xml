@@ -49,6 +49,31 @@
             android:theme="@style/Theme.PlanterGroupProj" />
 
         <activity
+            android:name=".MintCard"
+            android:exported="false"
+            android:theme="@style/Theme.PlanterGroupProj" />
+
+        <activity
+            android:name=".ParsleyCard"
+            android:exported="false"
+            android:theme="@style/Theme.PlanterGroupProj" />
+
+        <activity
+            android:name=".OreganoCard"
+            android:exported="false"
+            android:theme="@style/Theme.PlanterGroupProj" />
+
+        <activity
+            android:name=".RosemaryCard"
+            android:exported="false"
+            android:theme="@style/Theme.PlanterGroupProj" />
+
+        <activity
+            android:name=".ThymeCard"
+            android:exported="false"
+            android:theme="@style/Theme.PlanterGroupProj" />
+
+        <activity
             android:name=".RecipeDetailActivity"
             android:exported="false"
             android:theme="@style/Theme.PlanterGroupProj" />
