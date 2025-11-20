@@ -63,7 +63,7 @@
             android:id="@+id/parsleyImage"
             android:layout_width="228dp"
             android:layout_height="262dp"
-            app:="@drawable/parsley"
+            android:src="@drawable/parsley"
             tools:layout_editor_absoluteX="91dp"
             tools:layout_editor_absoluteY="73dp"
             tools:ignore="ContentDescription,MissingConstraints"/>

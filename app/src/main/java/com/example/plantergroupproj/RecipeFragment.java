@@ -47,7 +47,6 @@ public class RecipeFragment extends Fragment {
         DatabaseReference recipesRef =
                 FirebaseDatabase.getInstance().getReference("recipes");
         // path for recipes with all the info as children
-
         List<Recipe> recipes = new ArrayList<>();
 
         Recipe BasilLemonade = new Recipe();
