@@ -21,6 +21,9 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
+import android.app.Application;
+import com.google.firebase.FirebaseApp;
+
 public class PlanterFragment extends Fragment {
     private LinearLayout planterList;
 
