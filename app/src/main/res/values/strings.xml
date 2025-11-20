@@ -156,4 +156,9 @@
     <string name="oregano">Oregano</string>
     <string name="backOregano">Back</string>
     <string name="homeOregano">HOME</string>
+    <string name="save_herb_parsley">SAVE HERB</string>
+    <string name="a_bright_fresh_slightly_peppery_and_grassy_herb_used_universally_as_both_a_garnish_and_a_flavorful_ingredient_in_everything_from_salads_and_soups_to_sauces_and_marinades">A bright, fresh, slightly peppery, and grassy herb used universally as both a garnish and a flavorful ingredient in everything from salads and soups to sauces and marinades.</string>
+    <string name="parsley">Parsley</string>
+    <string name="home_parsley">HOME</string>
+    <string name="back_parsley">Back</string>
 </resources>

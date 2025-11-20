@@ -47,7 +47,7 @@
         tools:ignore="MissingConstraints" />
 
     <TextView
-        android:id="@+id/oreganoTitle"
+        android:id="@+id/oreganoName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="serif"

@@ -99,7 +99,7 @@
                 android:textColor="#000000"/>
         </LinearLayout>
 
-        <fragment
+        <androidx.fragment.app.FragmentContainerView
             android:id="@+id/recipeFragmentBasil"
             android:name="com.example.plantergroupproj.RecipeFragment"
             android:layout_width="match_parent"
