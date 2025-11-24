@@ -34,6 +34,7 @@ public class RecipeDetailActivity extends AppCompatActivity {
         TextView shortDesc = findViewById(R.id.detailShortDesc);
         TextView desc = findViewById(R.id.detailDescription);
         ImageView imgV = findViewById(R.id.recipeImage);
+        // the areas to update with stuff from firebase
 
         FirebaseDatabase database;
 
@@ -43,6 +44,8 @@ public class RecipeDetailActivity extends AppCompatActivity {
         title.setText(recipeTitle);
         desc.setText(recipeDesc);
         shortDesc.setText(recipeShort);
+
+        // this is where its setting stuff with the get intent but replace this part with firebase data pull
 
         int imageResId = getIntent().getIntExtra("imageResId", 0);
 
@@ -65,6 +68,8 @@ public class RecipeDetailActivity extends AppCompatActivity {
             SharedPreferences prefs = getSharedPreferences("SavedRecipes", MODE_PRIVATE);
             SharedPreferences.Editor editor = prefs.edit();
 
+            // just putting all the stuff in saved recipe button area
+
             Set<String> titles = prefs.getStringSet("titles", new HashSet<>());
             if (!titles.contains(titleStr)) {
                 titles.add(titleStr);
@@ -81,6 +86,7 @@ public class RecipeDetailActivity extends AppCompatActivity {
         }); // save button onclick listener
 
 
+        //LAUREN WORKING
         database= FirebaseDatabase.getInstance();
 
         DatabaseReference recipesRef = FirebaseDatabase.getInstance().getReference("recipes");
