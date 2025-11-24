@@ -64,154 +64,113 @@ public class RecipeFragment extends Fragment {
 
         switch (herb) {
             case "Basil":
-                recipes.add(new Recipe(
-                        "Caprese Salad",
+                recipes.add(new Recipe("Caprese Salad",
                         "Fresh tomatoes, mozzarella, and basil drizzled with olive oil.",
-                        "Ingredients:\n" +
-                                "- 3 tomatoes\n" +
-                                "- Fresh basil leaves\n" +
-                                "- Fresh mozzarella\n" +
-                                "- Olive oil\n" +
-                                "- Salt & pepper\n\n" +
-                                "Instructions:\n" +
-                                "1. Slice tomatoes and mozzarella.\n" +
-                                "2. Layer tomato, mozzarella, and basil.\n" +
-                                "3. Drizzle with olive oil.\n" +
-                                "4. Add salt and pepper to taste.",
-                        R.drawable.caprese
-                ));
-                recipes.add(new Recipe(
-                        "Walnut Pesto",
-                        "Serve on pasta or use as a dressing or marinade.",
-                        "Ingredients:\n" +
-                                "- 2 cups fresh basil leaves\n" +
-                                "- 1/2 cup walnuts\n" +
-                                "- 1/2 cup grated parmesan\n" +
-                                "- 2 cloves garlic\n" +
-                                "- 1/2 cup olive oil\n" +
-                                "- Salt & pepper to taste\n\n" +
-                                "Instructions:\n" +
-                                "1. Add basil, walnuts, garlic, and parmesan to a food processor.\n" +
-                                "2. Pulse several times until roughly chopped.\n" +
-                                "3. Slowly drizzle in olive oil while blending.\n" +
-                                "4. Blend until smooth and creamy.\n" +
-                                "5. Season with salt and pepper to taste.",
-                        R.drawable.walnutpesto
-                ));
-                recipes.add(new Recipe(
-                        "Basil Lemonade",
-                        "A refreshing twist on classic lemonade with the aromatic flavor of fresh basil.",
-                        "Ingredients:\n" +
-                                "- 1 cup fresh basil leaves\n" +
-                                "- 1 cup freshly squeezed lemon juice (about 4-6 lemons)\n" +
-                                "- ¾ cup sugar or honey\n" +
-                                "- 4 cups cold water\n" +
-                                "- Ice cubes\n" +
-                                "- Lemon slices and basil sprigs for garnish\n\n" +
-                                "Instructions:\n" +
-                                "1. In a small saucepan, combine 1 cup water, sugar, and basil leaves.\n" +
-                                "2. Heat over medium, stirring until sugar dissolves (about 5 minutes).\n" +
-                                "3. Remove from heat and let the basil steep for 15-20 minutes.\n" +
-                                "4. Strain the basil syrup into a pitcher, pressing on the leaves to extract flavor.\n" +
-                                "5. Add lemon juice and remaining 3 cups cold water.\n" +
-                                "6. Stir well and refrigerate until chilled.\n" +
-                                "7. Serve over ice, garnished with lemon slices and fresh basil.",
-                        R.drawable.lemonade
-                ));
+                        "Slice tomatoes and mozzarella. Layer with basil. Drizzle olive oil. Season.",
+                        R.drawable.caprese, "Basil"));
+                recipes.add(new Recipe("Walnut Pesto",
+                        "Serve on pasta or use as dressing.",
+                        "Blend basil, walnuts, parmesan, garlic, olive oil. Season.",
+                        R.drawable.walnutpesto, "Basil"));
+                recipes.add(new Recipe("Basil Lemonade",
+                        "Refreshing lemonade with basil.",
+                        "Make basil syrup. Add lemon juice and water. Serve cold.",
+                        R.drawable.lemonade, "Basil"));
                 break;
+
             case "Bay":
-                recipes.add(new Recipe(
-                        "Classic Beef Stew",
-                        "A hearty, comforting stew where bay leaves provide subtle aromatic depth.",
-                        "Ingredients:\n" +
-                                "- 2 lbs beef chuck, cubed\n" +
-                                "- 2 tbsp olive oil\n" +
-                                "- 1 large onion, chopped\n" +
-                                "- 3 carrots, sliced\n" +
-                                "- 3 celery stalks, sliced\n" +
-                                "- 3 cloves garlic, minced\n" +
-                                "- 4 cups beef broth\n" +
-                                "- 1 cup red wine (optional)\n" +
-                                "- 2 bay leaves\n" +
-                                "- 1 tsp thyme\n" +
-                                "- 2 potatoes, cubed\n" +
-                                "- Salt and pepper to taste\n" +
-                                "- 2 tbsp tomato paste\n\n" +
-                                "Instructions:\n" +
-                                "1. Season beef with salt and pepper. Heat oil in large pot and brown beef in batches.\n" +
-                                "2. Add onions, carrots, and celery. Cook until softened (5-7 minutes).\n" +
-                                "3. Add garlic and tomato paste, cook for 1 minute until fragrant.\n" +
-                                "4. Return beef to pot, add broth, wine, bay leaves, and thyme.\n" +
-                                "5. Bring to boil, then reduce heat and simmer covered for 1.5 hours.\n" +
-                                "6. Add potatoes and cook for 30 more minutes until tender.\n" +
-                                "7. Remove bay leaves before serving.\n" +
-                                "8. Season with additional salt and pepper if needed.\n\n" +
-                                "Tips:\n" +
-                                "- Bay leaves are essential for depth of flavor - don't skip them!\n" +
-                                "- Remember to remove bay leaves before serving as they can be sharp\n" +
-                                "- Stew tastes even better the next day as flavors meld",
-                        R.drawable.beef_stew
-                ));
-                recipes.add(new Recipe("Bay Leaf Pound Cake Recipe",
-                        "An incredibly moist and fragrant bay leaf pound cake from David Lebovitz's new cookbook. ",
-                        "",
-                        R.drawable.basicleaf
-                ));
-                recipes.add(new Recipe("", "", "", R.drawable.basicleaf
-                ));
+                recipes.add(new Recipe("Classic Beef Stew",
+                        "Hearty stew with bay leaves.",
+                        "Brown beef. Add veggies, broth, bay leaves. Simmer.",
+                        R.drawable.beef_stew, "Bay"));
+                recipes.add(new Recipe("Roasted Chicken with Bay",
+                        "Juicy chicken with lemon & bay leaves.",
+                        "Stuff chicken with bay & lemon. Roast until done.",
+                        R.drawable.basicleaf, "Bay"));
+                recipes.add(new Recipe("Bay Leaf Pound Cake",
+                        "Moist fragrant pound cake.",
+                        "Mix batter with bay flavor. Bake until golden.",
+                        R.drawable.basicleaf, "Bay"));
                 break;
+
             case "Mint":
-                // Add mint recipes here
-                recipes.add(new Recipe("", "", "", R.drawable.basicleaf
-                ));
-                recipes.add(new Recipe("", "", "", R.drawable.basicleaf
-                ));
-                recipes.add(new Recipe("", "", "", R.drawable.basicleaf
-                ));
+                recipes.add(new Recipe("Mint Yogurt Dip",
+                        "Creamy dip flavored with mint.",
+                        "Mix yogurt, mint, garlic, lemon. Chill.",
+                        R.drawable.basicleaf, "Mint"));
+                recipes.add(new Recipe("Mint Lemon Tea",
+                        "Refreshing mint tea.",
+                        "Steep mint in hot water. Add lemon.",
+                        R.drawable.basicleaf, "Mint"));
+                recipes.add(new Recipe("Chocolate Mint Smoothie",
+                        "Cool smoothie with chocolate and mint.",
+                        "Blend milk, chocolate, mint leaves, ice.",
+                        R.drawable.basicleaf, "Mint"));
                 break;
 
             case "Oregano":
-                // Add rosemary recipes here
-                recipes.add(new Recipe("", "", "", R.drawable.basicleaf
-                ));
-                recipes.add(new Recipe("", "", "", R.drawable.basicleaf
-                ));
-                recipes.add(new Recipe("", "", "", R.drawable.basicleaf
-                ));
+                recipes.add(new Recipe("Oregano Tomato Pasta",
+                        "Quick pasta with oregano tomato sauce.",
+                        "Cook pasta. Toss with tomato sauce and oregano.",
+                        R.drawable.basicleaf, "Oregano"));
+                recipes.add(new Recipe("Grilled Oregano Chicken",
+                        "Juicy chicken with oregano flavor.",
+                        "Marinate chicken with oregano. Grill.",
+                        R.drawable.basicleaf, "Oregano"));
+                recipes.add(new Recipe("Oregano Roasted Veggies",
+                        "Simple roasted veggies with oregano.",
+                        "Toss veggies with oregano & oil. Roast.",
+                        R.drawable.basicleaf, "Oregano"));
                 break;
 
             case "Parsley":
-                // Add mint recipes here
-                recipes.add(new Recipe("", "", "", R.drawable.basicleaf
-                ));
-                recipes.add(new Recipe("", "", "", R.drawable.basicleaf
-                ));
-                recipes.add(new Recipe("", "", "", R.drawable.basicleaf
-                ));
+                recipes.add(new Recipe("Parsley Lemon Potatoes",
+                        "Roasted potatoes with parsley.",
+                        "Toss potatoes with parsley & oil. Roast.",
+                        R.drawable.basicleaf, "Parsley"));
+                recipes.add(new Recipe("Garlic Parsley Shrimp",
+                        "Quick shrimp sauté with parsley.",
+                        "Sauté shrimp with garlic & parsley.",
+                        R.drawable.basicleaf, "Parsley"));
+                recipes.add(new Recipe("Parsley Salad",
+                        "Fresh parsley salad with lemon.",
+                        "Mix parsley, lemon juice, olive oil. Serve.",
+                        R.drawable.basicleaf, "Parsley"));
                 break;
 
             case "Thyme":
-                // Add rosemary recipes here
-                recipes.add(new Recipe("", "", "", R.drawable.basicleaf
-                ));
-                recipes.add(new Recipe("", "", "", R.drawable.basicleaf
-                ));
-                recipes.add(new Recipe("", "", "", R.drawable.basicleaf
-                ));
+                recipes.add(new Recipe("Thyme Roasted Chicken",
+                        "Juicy chicken with thyme.",
+                        "Season chicken with thyme. Roast.",
+                        R.drawable.basicleaf, "Thyme"));
+                recipes.add(new Recipe("Lemon Thyme Fish",
+                        "Light fish with lemon and thyme.",
+                        "Season fish with thyme & lemon. Bake.",
+                        R.drawable.basicleaf, "Thyme"));
+                recipes.add(new Recipe("Thyme Mashed Potatoes",
+                        "Creamy mashed potatoes with thyme.",
+                        "Mash potatoes with thyme and butter.",
+                        R.drawable.basicleaf, "Thyme"));
                 break;
+
             case "Rosemary":
-                // Add rosemary recipes here
-                recipes.add(new Recipe("", "", "", R.drawable.basicleaf
-                ));
-                recipes.add(new Recipe("", "", "", R.drawable.basicleaf
-                ));
-                recipes.add(new Recipe("", "", "", R.drawable.basicleaf
-                ));
+                recipes.add(new Recipe("Rosemary Garlic Bread",
+                        "Savory bread with rosemary.",
+                        "Mix dough with rosemary & garlic. Bake.",
+                        R.drawable.basicleaf, "Rosemary"));
+                recipes.add(new Recipe("Rosemary Roast Lamb",
+                        "Tender lamb with rosemary flavor.",
+                        "Season lamb with rosemary. Roast until done.",
+                        R.drawable.basicleaf, "Rosemary"));
+                recipes.add(new Recipe("Rosemary Potato Wedges",
+                        "Crispy potato wedges with rosemary.",
+                        "Toss potato wedges with rosemary & oil. Bake.",
+                        R.drawable.basicleaf, "Rosemary"));
                 break;
+        } // end switch cases
 
-        } // end switch case
 
-      // Log.i("LAURENRECIPIES", recipes.toString());
+        // Log.i("LAURENRECIPIES", recipes.toString());
 
 
        // recipesRef.push().setValue(BasilLemonade);
@@ -230,6 +189,7 @@ public class RecipeFragment extends Fragment {
                 }
             });
         }
+
 
 
 
@@ -262,6 +222,7 @@ public class RecipeFragment extends Fragment {
             intent.putExtra("imageResId", recipe.getImageResId());
             intent.putExtra("shortDesc", recipe.getShortDescription());
             intent.putExtra("description", recipe.getFullDescription());
+            intent.putExtra("plantName", recipe.getPlantName());
             startActivity(intent);
         });
 

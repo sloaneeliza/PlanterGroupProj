@@ -108,3 +108,12 @@ xml error stopping me now
 lauren
 fixed some UI and errors in XML,fixing the firebase and moving stuff into it still
 ================================================================
+
+lauren 11/23/25
+
+im doing firebase still questions
+- it takes super long to get them to upload into firebase they are uploading as i click on the
+    plants bc i kept them in the switch cases- i should porbably take them out of there
+- but i will finish the firebase so its in a database but its taking so long for it to uplaod via my log- is this just wrong
+
+================================================================

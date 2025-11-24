@@ -36,11 +36,16 @@ public class RecipeDetailActivity extends AppCompatActivity {
         ImageView imgV = findViewById(R.id.recipeImage);
         // the areas to update with stuff from firebase
 
+        // i want to pull the stuff form the firebase to put it into the UI but it just takes so lnog
+        // so i might just do the code and then keep the original intent since it takes os long
+        // to input and pull from firebase
+
         FirebaseDatabase database;
 
         String recipeTitle = getIntent().getStringExtra("title");
         String recipeDesc = getIntent().getStringExtra("description");
         String recipeShort = getIntent().getStringExtra("shortDesc");
+        String plantName = getIntent().getStringExtra("plantName");
         title.setText(recipeTitle);
         desc.setText(recipeDesc);
         shortDesc.setText(recipeShort);
