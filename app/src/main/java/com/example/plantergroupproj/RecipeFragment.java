@@ -22,7 +22,7 @@ import java.util.List;
 public class RecipeFragment extends Fragment {
 
     private static final String ARG_HERB = "herb";
-    DatabaseReference database;
+    FirebaseDatabase database;
 
     // database
 
@@ -46,13 +46,18 @@ public class RecipeFragment extends Fragment {
 
 
 
-        DatabaseReference recipesRef =
-                FirebaseDatabase.getInstance().getReference("recipes");
+
         // path for recipes with all the info as children
+        // im pushing into here
+
+        // switch all the current switch cases into new recipes and then add them
+        // can i make it in the database i have basil and then in there a recipe how do i make a new thing maybe i make another constructor in recipe class
+        // so i can have the plant tag and then sort them by plant tag - or maybe number even
         List<Recipe> recipes = new ArrayList<>();
 
-        Recipe BasilLemonade = new Recipe();
-        Recipe CapreseSalad = new Recipe();
+        // recipes is arraylist so go through and add to database
+
+
 
         switch (herb) {
             case "Basil":
@@ -203,8 +208,24 @@ public class RecipeFragment extends Fragment {
 
         }
 
-        recipesRef.push().setValue(BasilLemonade);
-        recipesRef.push().setValue(CapreseSalad);
+       // recipesRef.push().setValue(BasilLemonade);
+        //recipesRef.push().setValue(CapreseSalad);
+
+        database= FirebaseDatabase.getInstance();
+
+        DatabaseReference recipesRef = FirebaseDatabase.getInstance().getReference("recipes");
+        recipesRef.get().addOnCompleteListener(task -> {
+            if (task.isSuccessful()) {
+                if (!task.getResult().exists()) {
+                    String[] myRecipes = {"apple", "bread", "water", "lover", "taylor"};
+                    for (Recipe w : recipes) {
+                        //Recipe word = new Recipe(); // already recipes so dont need
+                        //word.setRe(w);
+                       recipesRef.push().setValue(w);
+                    }
+                }
+            }
+        }); // end on complete listener
 
         //add each recipe to the container
         for (Recipe recipe : recipes) {
@@ -212,6 +233,7 @@ public class RecipeFragment extends Fragment {
             recipesContainer.addView(recipeItemView);
         }
         return view;
+        // like here ill put that thing
     }
 
     private View createRecipeItemView(LayoutInflater inflater, ViewGroup parent, Recipe recipe) {
@@ -236,6 +258,9 @@ public class RecipeFragment extends Fragment {
             startActivity(intent);
         });
 
+        // giving the recipes to recipe detail activity from this fragment where they are created
+        // so ill create them on initial and put them in the database and then ill just update the recipe detail activity
+        // to query the database for the recipes
         return recipeItemView;
     }
 }
