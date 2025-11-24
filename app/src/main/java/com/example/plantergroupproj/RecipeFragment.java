@@ -6,6 +6,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +14,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.google.firebase.FirebaseApp;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -43,6 +45,7 @@ public class RecipeFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_recipe, container, false);
         LinearLayout recipesContainer = view.findViewById(R.id.recipeContainer);
         String herb = getArguments() != null ? getArguments().getString(ARG_HERB) : "";
+       // FirebaseApp.initializeApp(requireContext());
 
 
 
@@ -206,7 +209,10 @@ public class RecipeFragment extends Fragment {
                 ));
                 break;
 
-        }
+        } // end switch case
+
+      // Log.i("LAURENRECIPIES", recipes.toString());
+
 
        // recipesRef.push().setValue(BasilLemonade);
         //recipesRef.push().setValue(CapreseSalad);
@@ -214,18 +220,19 @@ public class RecipeFragment extends Fragment {
         database= FirebaseDatabase.getInstance();
 
         DatabaseReference recipesRef = FirebaseDatabase.getInstance().getReference("recipes");
-        recipesRef.get().addOnCompleteListener(task -> {
-            if (task.isSuccessful()) {
-                if (!task.getResult().exists()) {
-                    String[] myRecipes = {"apple", "bread", "water", "lover", "taylor"};
-                    for (Recipe w : recipes) {
-                        //Recipe word = new Recipe(); // already recipes so dont need
-                        //word.setRe(w);
-                       recipesRef.push().setValue(w);
-                    }
+
+        for (Recipe recipe : recipes) {
+            recipesRef.push().setValue(recipe).addOnCompleteListener(task -> {
+                if (task.isSuccessful()) {
+                    Log.i("LAURENRECIPE", "Uploaded: " + recipe.getTitle());
+                } else {
+                    Log.e("LAURENRECIPEFAIL", "Failed to upload", task.getException());
                 }
-            }
-        }); // end on complete listener
+            });
+        }
+
+
+
 
         //add each recipe to the container
         for (Recipe recipe : recipes) {

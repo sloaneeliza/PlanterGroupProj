@@ -17,6 +17,7 @@ public class WelcomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+
         //If you want to start fresh
         // with no shared preferences:
         // Android Studio → Device Manager → ⋮ → Wipe Data
