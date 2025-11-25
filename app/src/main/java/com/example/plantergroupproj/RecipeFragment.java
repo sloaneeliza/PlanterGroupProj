@@ -15,8 +15,11 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.google.firebase.FirebaseApp;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -167,10 +170,11 @@ public class RecipeFragment extends Fragment {
                         "Toss potato wedges with rosemary & oil. Bake.",
                         R.drawable.basicleaf, "Rosemary"));
                 break;
+
         } // end switch cases
 
 
-        // Log.i("LAURENRECIPIES", recipes.toString());
+       // Log.i("LAURENRECIPIES", recipes.toString());
 
 
        // recipesRef.push().setValue(BasilLemonade);
@@ -180,15 +184,39 @@ public class RecipeFragment extends Fragment {
 
         DatabaseReference recipesRef = FirebaseDatabase.getInstance().getReference("recipes");
 
+//        recipesRef.limitToLast(10).addListenerForSingleValueEvent(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(@NonNull DataSnapshot snapshot) {
+//                for (DataSnapshot current : snapshot.getChildren()){
+//                    Recipe r = current.getValue(Recipe.class);
+//                    Log.i("LAUREN", r.getShortDescription());
+//                }
+//            }
+//
+//            @Override
+//            public void onCancelled(@NonNull DatabaseError error) {
+//                Log.i("LAURENE", error.getDetails());
+//            }
+//        });
+
+
         for (Recipe recipe : recipes) {
-            recipesRef.push().setValue(recipe).addOnCompleteListener(task -> {
+            DatabaseReference plantRef = recipesRef.child(recipes.get(0).getPlantName());
+
+            //Log.i("LAUREN", recipe.getPlantName());
+
+            // now we can use recipe.getPlantName() here
+            String nodeId = plantRef.push().getKey();
+           // Log.i("LAUREN", nodeId);
+            plantRef.child(nodeId).setValue(recipe).addOnCompleteListener(task -> {
+                Log.i("LAUREN", task.toString());
                 if (task.isSuccessful()) {
                     Log.i("LAURENRECIPE", "Uploaded: " + recipe.getTitle());
                 } else {
                     Log.e("LAURENRECIPEFAIL", "Failed to upload", task.getException());
                 }
             });
-        }
+        } // end for loop
 
 
 

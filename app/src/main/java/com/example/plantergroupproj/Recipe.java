@@ -9,7 +9,7 @@ public class Recipe {
 
     private int imageResId;
 
-    public static final String TITLE_KEY  = "TITLEV";
+    //public static final String TITLE_KEY  = "TITLEV";
     public Recipe(String title, String shortDescription, String fullDescription, int imageResId, String plantName) {
         this.title = title;
         this.shortDescription = shortDescription;
