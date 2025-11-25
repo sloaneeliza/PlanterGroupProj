@@ -170,7 +170,6 @@ public class RecipeFragment extends Fragment {
                         "Toss potato wedges with rosemary & oil. Bake.",
                         R.drawable.basicleaf, "Rosemary"));
                 break;
-
         } // end switch cases
 
 
