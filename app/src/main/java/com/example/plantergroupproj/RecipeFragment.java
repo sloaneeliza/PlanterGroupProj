@@ -198,6 +198,7 @@ public class RecipeFragment extends Fragment {
 //            }
 //        });
 
+        //
 
         for (Recipe recipe : recipes) {
             DatabaseReference plantRef = recipesRef.child(recipes.get(0).getPlantName());
