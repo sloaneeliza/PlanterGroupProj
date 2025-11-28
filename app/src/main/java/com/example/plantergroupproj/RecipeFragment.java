@@ -89,18 +89,18 @@ public class RecipeFragment extends Fragment {
                 recipes.add(new Recipe("Roasted Chicken with Bay",
                         "Juicy chicken with lemon & bay leaves.",
                         "Stuff chicken with bay & lemon. Roast until done.",
-                        R.drawable.basicleaf, "Bay"));
+                        R.drawable.roasted_chicken_with_bay, "Bay"));
                 recipes.add(new Recipe("Bay Leaf Pound Cake",
                         "Moist fragrant pound cake.",
                         "Mix batter with bay flavor. Bake until golden.",
-                        R.drawable.basicleaf, "Bay"));
+                        R.drawable.pound_cake_bay, "Bay"));
                 break;
 
             case "Mint":
                 recipes.add(new Recipe("Mint Yogurt Dip",
                         "Creamy dip flavored with mint.",
                         "Mix yogurt, mint, garlic, lemon. Chill.",
-                        R.drawable.basicleaf, "Mint"));
+                        R.drawable.mintyogurtdip, "Mint"));
                 recipes.add(new Recipe("Mint Lemon Tea",
                         "Refreshing mint tea.",
                         "Steep mint in hot water. Add lemon.",
