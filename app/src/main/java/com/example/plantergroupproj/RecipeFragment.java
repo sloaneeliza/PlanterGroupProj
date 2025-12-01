@@ -100,30 +100,30 @@ public class RecipeFragment extends Fragment {
                 recipes.add(new Recipe("Mint Yogurt Dip",
                         "Creamy dip flavored with mint.",
                         "Mix yogurt, mint, garlic, lemon. Chill.",
-                        R.drawable.mint_chocolate_chip_smoothie, "Mint"));
+                        R.drawable.mint_yogurt, "Mint"));
                 recipes.add(new Recipe("Mint Lemon Tea",
                         "Refreshing mint tea.",
                         "Steep mint in hot water. Add lemon.",
-                        R.drawable.mintlemontea, "Mint"));
+                        R.drawable.mint_lemon_tea, "Mint"));
                 recipes.add(new Recipe("Chocolate Mint Smoothie",
                         "Cool smoothie with chocolate and mint.",
                         "Blend milk, chocolate, mint leaves, ice.",
-                        R.drawable.mintsmoothie, "Mint"));
+                        R.drawable.mint_chocolate_chip_smoothie, "Mint"));
                 break;
 
             case "Oregano":
                 recipes.add(new Recipe("Oregano Tomato Pasta",
                         "Quick pasta with oregano tomato sauce.",
                         "Cook pasta. Toss with tomato sauce and oregano.",
-                        R.drawable.basicleaf, "Oregano"));
+                        R.drawable.oregano_tomato_pasta, "Oregano"));
                 recipes.add(new Recipe("Grilled Oregano Chicken",
                         "Juicy chicken with oregano flavor.",
                         "Marinate chicken with oregano. Grill.",
-                        R.drawable.basicleaf, "Oregano"));
+                        R.drawable.grilled_oregano_chicken, "Oregano"));
                 recipes.add(new Recipe("Oregano Roasted Veggies",
                         "Simple roasted veggies with oregano.",
                         "Toss veggies with oregano & oil. Roast.",
-                        R.drawable.basicleaf, "Oregano"));
+                        R.drawable.oregano_roasted_veggies, "Oregano"));
                 break;
 
             case "Parsley":
