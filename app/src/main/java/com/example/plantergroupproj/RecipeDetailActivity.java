@@ -91,7 +91,7 @@ public class RecipeDetailActivity extends AppCompatActivity {
         }); // save button onclick listener
 
 
-        //LAUREN WORKING
+        //LAUREN
         database= FirebaseDatabase.getInstance();
 
         DatabaseReference recipesRef = FirebaseDatabase.getInstance().getReference("recipes");
@@ -121,5 +121,23 @@ public class RecipeDetailActivity extends AppCompatActivity {
             }
 
         }); // end add listener
+
+        //added in to pull the stuff from firebase - nothing in firebase rn though
+
+        recipesRef.limitToLast(10).addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                for (DataSnapshot current : snapshot.getChildren()){
+                    Recipe r = current.getValue(Recipe.class);
+                    Log.i("LAUREN", r.getShortDescription());
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                Log.i("LAURENE", error.getDetails());
+            }
+        });
+
     } // end on create
 }

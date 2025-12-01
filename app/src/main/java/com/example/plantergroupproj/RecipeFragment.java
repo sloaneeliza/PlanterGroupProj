@@ -183,22 +183,22 @@ public class RecipeFragment extends Fragment {
 
         DatabaseReference recipesRef = FirebaseDatabase.getInstance().getReference("recipes");
 
-//        recipesRef.limitToLast(10).addListenerForSingleValueEvent(new ValueEventListener() {
-//            @Override
-//            public void onDataChange(@NonNull DataSnapshot snapshot) {
-//                for (DataSnapshot current : snapshot.getChildren()){
-//                    Recipe r = current.getValue(Recipe.class);
-//                    Log.i("LAUREN", r.getShortDescription());
-//                }
-//            }
-//
-//            @Override
-//            public void onCancelled(@NonNull DatabaseError error) {
-//                Log.i("LAURENE", error.getDetails());
-//            }
-//        });
+        recipesRef.limitToLast(10).addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                for (DataSnapshot current : snapshot.getChildren()){
+                    Recipe r = current.getValue(Recipe.class);
+                    Log.i("LAUREN", r.getShortDescription());
+                }
+            }
 
-        //
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                Log.i("LAURENE", error.getDetails());
+            }
+        });
+
+
 
         for (Recipe recipe : recipes) {
             DatabaseReference plantRef = recipesRef.child(recipes.get(0).getPlantName());
