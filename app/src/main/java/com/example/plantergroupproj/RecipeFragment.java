@@ -104,11 +104,11 @@ public class RecipeFragment extends Fragment {
                 recipes.add(new Recipe("Mint Lemon Tea",
                         "Refreshing mint tea.",
                         "Steep mint in hot water. Add lemon.",
-                        R.drawable.basicleaf, "Mint"));
+                        R.drawable.mintlemontea, "Mint"));
                 recipes.add(new Recipe("Chocolate Mint Smoothie",
                         "Cool smoothie with chocolate and mint.",
                         "Blend milk, chocolate, mint leaves, ice.",
-                        R.drawable.basicleaf, "Mint"));
+                        R.drawable.mintsmoothie, "Mint"));
                 break;
 
             case "Oregano":
