@@ -130,45 +130,45 @@ public class RecipeFragment extends Fragment {
                 recipes.add(new Recipe("Parsley Lemon Potatoes",
                         "Roasted potatoes with parsley.",
                         "Toss potatoes with parsley & oil. Roast.",
-                        R.drawable.basicleaf, "Parsley"));
+                        R.drawable.parsley_lemon_potatoes, "Parsley"));
                 recipes.add(new Recipe("Garlic Parsley Shrimp",
                         "Quick shrimp sauté with parsley.",
                         "Sauté shrimp with garlic & parsley.",
-                        R.drawable.basicleaf, "Parsley"));
+                        R.drawable.parsley_shrimp, "Parsley"));
                 recipes.add(new Recipe("Parsley Salad",
                         "Fresh parsley salad with lemon.",
                         "Mix parsley, lemon juice, olive oil. Serve.",
-                        R.drawable.basicleaf, "Parsley"));
+                        R.drawable.parsley_salad, "Parsley"));
                 break;
 
             case "Thyme":
                 recipes.add(new Recipe("Thyme Roasted Chicken",
                         "Juicy chicken with thyme.",
                         "Season chicken with thyme. Roast.",
-                        R.drawable.basicleaf, "Thyme"));
+                        R.drawable.thyme_chicken, "Thyme"));
                 recipes.add(new Recipe("Lemon Thyme Fish",
                         "Light fish with lemon and thyme.",
                         "Season fish with thyme & lemon. Bake.",
-                        R.drawable.basicleaf, "Thyme"));
+                        R.drawable.thyme_fish, "Thyme"));
                 recipes.add(new Recipe("Thyme Mashed Potatoes",
                         "Creamy mashed potatoes with thyme.",
                         "Mash potatoes with thyme and butter.",
-                        R.drawable.basicleaf, "Thyme"));
+                        R.drawable.thyme_potatoes, "Thyme"));
                 break;
 
             case "Rosemary":
                 recipes.add(new Recipe("Rosemary Garlic Bread",
                         "Savory bread with rosemary.",
                         "Mix dough with rosemary & garlic. Bake.",
-                        R.drawable.basicleaf, "Rosemary"));
+                        R.drawable.rosemary_bread, "Rosemary"));
                 recipes.add(new Recipe("Rosemary Roast Lamb",
                         "Tender lamb with rosemary flavor.",
                         "Season lamb with rosemary. Roast until done.",
-                        R.drawable.basicleaf, "Rosemary"));
+                        R.drawable.rosemary_lamb, "Rosemary"));
                 recipes.add(new Recipe("Rosemary Potato Wedges",
                         "Crispy potato wedges with rosemary.",
                         "Toss potato wedges with rosemary & oil. Bake.",
-                        R.drawable.basicleaf, "Rosemary"));
+                        R.drawable.rosemary_potatoes, "Rosemary"));
                 break;
         } // end switch cases
 
