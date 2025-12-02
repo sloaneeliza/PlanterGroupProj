@@ -200,23 +200,25 @@ public class RecipeFragment extends Fragment {
 
 
 
-        for (Recipe recipe : recipes) {
-            DatabaseReference plantRef = recipesRef.child(recipes.get(0).getPlantName());
+        // adds them to the thing
 
-            //Log.i("LAUREN", recipe.getPlantName());
-
-            // now we can use recipe.getPlantName() here
-            String nodeId = plantRef.push().getKey();
-           // Log.i("LAUREN", nodeId);
-            plantRef.child(nodeId).setValue(recipe).addOnCompleteListener(task -> {
-                Log.i("LAUREN", task.toString());
-                if (task.isSuccessful()) {
-                    Log.i("LAURENRECIPE", "Uploaded: " + recipe.getTitle());
-                } else {
-                    Log.e("LAURENRECIPEFAIL", "Failed to upload", task.getException());
-                }
-            });
-        } // end for loop
+//        for (Recipe recipe : recipes) {
+//            DatabaseReference plantRef = recipesRef.child(recipes.get(0).getPlantName());
+//
+//            //Log.i("LAUREN", recipe.getPlantName());
+//
+//            // now we can use recipe.getPlantName() here
+//            String nodeId = plantRef.push().getKey();
+//           // Log.i("LAUREN", nodeId);
+//            plantRef.child(nodeId).setValue(recipe).addOnCompleteListener(task -> {
+//                Log.i("LAUREN", task.toString());
+//                if (task.isSuccessful()) {
+//                    Log.i("LAURENRECIPE", "Uploaded: " + recipe.getTitle());
+//                } else {
+//                    Log.e("LAURENRECIPEFAIL", "Failed to upload", task.getException());
+//                }
+//            });
+//        } // end for loop
 
 
 
