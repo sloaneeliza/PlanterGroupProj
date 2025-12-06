@@ -8,73 +8,64 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.Random;
 import java.util.Set;
 
-import android.app.Application;
-import com.google.firebase.FirebaseApp;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
-
 public class RecipeDetailActivity extends AppCompatActivity {
+
+    private String titleStr;
+    private String shortStr;
+    private String fullStr;
+    private int imageId;
+    private String plantName;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recipe_detail);
 
+        // UI references
         TextView title = findViewById(R.id.detailTitle);
         TextView shortDesc = findViewById(R.id.detailShortDesc);
         TextView desc = findViewById(R.id.detailDescription);
         ImageView imgV = findViewById(R.id.recipeImage);
-        // the areas to update with stuff from firebase
 
-        // i want to pull the stuff form the firebase to put it into the UI but it just takes so lnog
-        // so i might just do the code and then keep the original intent since it takes os long
-        // to input and pull from firebase
+        // get all recipe info from the intent (sent from RecipeFragment)
+        titleStr = getIntent().getStringExtra("title");
+        fullStr = getIntent().getStringExtra("description");
+        shortStr = getIntent().getStringExtra("shortDesc");
+        imageId = getIntent().getIntExtra("imageResId", 0);
+        plantName = getIntent().getStringExtra("plantName");
 
-        FirebaseDatabase database;
-
-        String recipeTitle = getIntent().getStringExtra("title");
-        String recipeDesc = getIntent().getStringExtra("description");
-        String recipeShort = getIntent().getStringExtra("shortDesc");
-        String plantName = getIntent().getStringExtra("plantName");
-        title.setText(recipeTitle);
-        desc.setText(recipeDesc);
-        shortDesc.setText(recipeShort);
-
-        // this is where its setting stuff with the get intent but replace this part with firebase data pull
-
-        int imageResId = getIntent().getIntExtra("imageResId", 0);
-
-        if (imageResId != 0) {
-            imgV.setImageResource(imageResId);
-        }
-        ImageButton backButton = findViewById(R.id.backBtnBasil);
-        backButton.setOnClickListener(v -> {
+        // check for null title or plantName to avoid crash
+        if (titleStr == null || plantName == null) {
+            Log.e("RecipeDetailActivity", "Missing title or plantName in Intent!");
+            Toast.makeText(this, "Recipe not found.", Toast.LENGTH_SHORT).show();
             finish();
-        });
+            return;
+        }
 
+        // set UI immediately
+        title.setText(titleStr);
+        shortDesc.setText(shortStr);
+        desc.setText(fullStr);
+        if (imageId != 0) {
+            imgV.setImageResource(imageId);
+        }
+
+        // back button functionality
+        ImageButton backButton = findViewById(R.id.backBtnBasil);
+        backButton.setOnClickListener(v -> finish());
+
+        // save button functionality
         ImageView saveRecipeBtn = findViewById(R.id.saveRecipeBtn);
-
-        String titleStr = recipeTitle;
-        String shortStr = recipeShort;
-        String fullStr = recipeDesc;
-        int imageId = imageResId;
-
         saveRecipeBtn.setOnClickListener(v -> {
             SharedPreferences prefs = getSharedPreferences("SavedRecipes", MODE_PRIVATE);
             SharedPreferences.Editor editor = prefs.edit();
 
             // just putting all the stuff in saved recipe button area
-
             Set<String> titles = prefs.getStringSet("titles", new HashSet<>());
             if (!titles.contains(titleStr)) {
                 titles.add(titleStr);
@@ -86,58 +77,7 @@ public class RecipeDetailActivity extends AppCompatActivity {
 
                 editor.apply();
                 Toast.makeText(this, "Recipe saved!", Toast.LENGTH_SHORT).show();
-
             }
         }); // save button onclick listener
-
-
-        //LAUREN
-        database= FirebaseDatabase.getInstance();
-
-        DatabaseReference recipesRef = FirebaseDatabase.getInstance().getReference("recipes");
-
-        recipesRef.addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) { //runs even if data isn't changed- stupid name
-                ArrayList<String> list = new ArrayList<>(); // this is global
-
-                for (DataSnapshot child : snapshot.getChildren()) {
-                    Recipe wordObj = child.getValue(Recipe.class);
-                    if (wordObj != null) {
-                        list.add(wordObj.getTitle()); // its a hashmap in my thing ugh this makes it deal with object instead of string
-                    }
-                }
-
-                if (!list.isEmpty()) {
-                   String random = list.get(new Random().nextInt(list.size()));
-                   // secretWord = random.toLowerCase(); //making the random word the secret word variable then i want to check the letters against their selection
-                    Log.i("LAUREN", random);
-                }
-            } // end on data change
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
-            }
-
-        }); // end add listener
-
-        //added in to pull the stuff from firebase - nothing in firebase rn though
-
-        recipesRef.limitToLast(10).addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                for (DataSnapshot current : snapshot.getChildren()){
-                    Recipe r = current.getValue(Recipe.class);
-                    Log.i("LAUREN", r.getShortDescription());
-                }
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-                Log.i("LAURENE", error.getDetails());
-            }
-        });
-
-    } // end on create
-}
+    } // end onCreate
+} // end RecipeDetailActivity

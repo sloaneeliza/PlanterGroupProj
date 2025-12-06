@@ -183,12 +183,17 @@ public class RecipeFragment extends Fragment {
 
         DatabaseReference recipesRef = FirebaseDatabase.getInstance().getReference("recipes");
 
-        recipesRef.limitToLast(10).addListenerForSingleValueEvent(new ValueEventListener() {
+        recipesRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                for (DataSnapshot current : snapshot.getChildren()){
-                    Recipe r = current.getValue(Recipe.class);
-                    Log.i("LAUREN", r.getShortDescription());
+                for (DataSnapshot plantSnap : snapshot.getChildren()) { // Basil, Bay, Mint...
+                    for (DataSnapshot recipeSnap : plantSnap.getChildren()) { // actual recipe nodes
+                        Recipe r = recipeSnap.getValue(Recipe.class);
+                        if (r != null) {
+                            r.setId(recipeSnap.getKey()); // this sets the Firebase key
+                            Log.i("LAUREN", "Loaded recipe: " + r.getTitle());
+                        }
+                    }
                 }
             }
 
@@ -252,7 +257,9 @@ public class RecipeFragment extends Fragment {
             intent.putExtra("imageResId", recipe.getImageResId());
             intent.putExtra("shortDesc", recipe.getShortDescription());
             intent.putExtra("description", recipe.getFullDescription());
+       //     intent.putExtra("recipeId", recipe.getId());
             intent.putExtra("plantName", recipe.getPlantName());
+
             startActivity(intent);
         });
 
