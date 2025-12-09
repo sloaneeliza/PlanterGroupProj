@@ -2,7 +2,6 @@ package com.example.plantergroupproj;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -22,98 +21,92 @@ import java.util.Set;
 
 public class RecipeDetailActivity extends AppCompatActivity {
 
-    private String titleStr;
-    private String shortStr;
-    private String fullStr;
-    private int imageId;
-    private String plantName;
+    private TextView titleView, shortDescView, fullDescView;
+    private ImageView imgView;
+    private Recipe currentRecipe;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recipe_detail);
 
-        // UI references
-        TextView title = findViewById(R.id.detailTitle);
-        TextView shortDesc = findViewById(R.id.detailShortDesc);
-        TextView desc = findViewById(R.id.detailDescription);
-        ImageView imgV = findViewById(R.id.recipeImage);
+        titleView = findViewById(R.id.detailTitle);
+        shortDescView = findViewById(R.id.detailShortDesc);
+        fullDescView = findViewById(R.id.detailDescription);
+        imgView = findViewById(R.id.recipeImage);
 
-        // get basic info from intent
-        titleStr = getIntent().getStringExtra("title");
-        plantName = getIntent().getStringExtra("plantName");
+        ImageButton backButton = findViewById(R.id.backBtnBasil);
+        backButton.setOnClickListener(v -> finish());
 
-        // check for null title or plantName to avoid crash
-        if (titleStr == null || plantName == null) {
-            Log.e("RecipeDetailActivity", "Missing title or plantName in Intent!");
+        String title = getIntent().getStringExtra("title");
+        String plant = getIntent().getStringExtra("plantName");
+
+        if (title == null || plant == null) {
             Toast.makeText(this, "Recipe not found.", Toast.LENGTH_SHORT).show();
             finish();
             return;
         }
 
-        // set title immediately so user sees something
-        title.setText(titleStr);
+        titleView.setText(title);
 
-        // back button functionality
-        ImageButton backButton = findViewById(R.id.backBtnBasil);
-        backButton.setOnClickListener(v -> finish());
+        // Fetch the full recipe from Firebase
+        fetchRecipeFromFirebase(title, plant);
 
-        // save button functionality
-        ImageView saveRecipeBtn = findViewById(R.id.saveRecipeBtn);
-        saveRecipeBtn.setOnClickListener(v -> {
-            SharedPreferences prefs = getSharedPreferences("SavedRecipes", MODE_PRIVATE);
-            SharedPreferences.Editor editor = prefs.edit();
+        findViewById(R.id.saveRecipeBtn).setOnClickListener(v ->
+                saveRecipe(title, plant));
+    }
 
-            Set<String> titles = prefs.getStringSet("titles", new HashSet<>());
-            if (!titles.contains(titleStr)) {
-                titles.add(titleStr);
-                editor.putStringSet("titles", titles);
+    private void fetchRecipeFromFirebase(String title, String plant) {
+        DatabaseReference ref = FirebaseDatabase.getInstance()
+                .getReference("recipes")
+                .child(plant);
 
-                editor.putString(titleStr + "_short", shortStr);
-                editor.putString(titleStr + "_full", fullStr);
-                editor.putInt(titleStr + "_image", imageId);
-
-                editor.apply();
-                Toast.makeText(this, "Recipe saved!", Toast.LENGTH_SHORT).show();
-            }
-        });
-
-        //
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference recipesRef = database.getReference("recipes").child(plantName);
-
-        // fetch all recipes for this plant and find the one matching the title
-        recipesRef.addListenerForSingleValueEvent(new ValueEventListener() {
+        ref.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                boolean found = false;
-                for (DataSnapshot recipeSnap : snapshot.getChildren()) {
-                    Recipe r = recipeSnap.getValue(Recipe.class);
-                    if (r != null && r.getTitle().equals(titleStr)) {
-                        // update UI with Firebase data
-                        shortStr = r.getShortDescription();
-                        fullStr = r.getFullDescription();
-                        imageId = r.getImageResId();
+                for (DataSnapshot snap : snapshot.getChildren()) {
+                    Recipe r = snap.getValue(Recipe.class);
+                    if (r != null && title.equals(r.getTitle())) {
+                        currentRecipe = r;
 
-                        shortDesc.setText(shortStr);
-                        desc.setText(fullStr);
-                        if (imageId != 0) imgV.setImageResource(imageId);
-
-                        found = true;
+                        shortDescView.setText(r.getShortDescription());
+                        fullDescView.setText(r.getFullDescription());
+                        if (r.getImageResId() != 0) imgView.setImageResource(r.getImageResId());
                         break;
                     }
-                }
-                if (!found) {
-                    Toast.makeText(RecipeDetailActivity.this, "Recipe not found in database.", Toast.LENGTH_SHORT).show();
-                    Log.w("RecipeDetailActivity", "Recipe with title " + titleStr + " not found under " + plantName);
                 }
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-                Log.e("RecipeDetailActivity", "Firebase load failed: " + error.getMessage());
                 Toast.makeText(RecipeDetailActivity.this, "Failed to load recipe.", Toast.LENGTH_SHORT).show();
             }
         });
-    } // end onCreate
-} // end RecipeDetailActivity
+    }
+
+    private void saveRecipe(String title, String plant) {
+        if (currentRecipe == null) {
+            Toast.makeText(this, "Recipe still loading...", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        SharedPreferences prefs = getSharedPreferences("SavedRecipes", MODE_PRIVATE);
+        SharedPreferences.Editor editor = prefs.edit();
+
+        Set<String> titles = prefs.getStringSet("titles", new HashSet<>());
+        if (!titles.contains(title)) {
+            titles.add(title);
+            editor.putStringSet("titles", titles);
+
+            editor.putString(title + "_plant", plant);
+            editor.putString(title + "_shortDesc", currentRecipe.getShortDescription());
+            editor.putString(title + "_fullDesc", currentRecipe.getFullDescription());
+            editor.putInt(title + "_image", currentRecipe.getImageResId());
+
+            editor.apply();
+            Toast.makeText(this, "Recipe saved!", Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(this, "Recipe already saved!", Toast.LENGTH_SHORT).show();
+        }
+    }
+}

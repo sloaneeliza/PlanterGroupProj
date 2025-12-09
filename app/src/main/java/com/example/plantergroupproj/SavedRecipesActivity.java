@@ -3,16 +3,19 @@ package com.example.plantergroupproj;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import java.util.Set;
 import java.util.HashSet;
+import java.util.Set;
 
 public class SavedRecipesActivity extends AppCompatActivity {
 
@@ -35,44 +38,40 @@ public class SavedRecipesActivity extends AppCompatActivity {
 
     private void loadSavedRecipes() {
         SharedPreferences prefs = getSharedPreferences("SavedRecipes", MODE_PRIVATE);
-        Set<String> savedSet = prefs.getStringSet("titles", new HashSet<>());
+        Set<String> savedTitles = prefs.getStringSet("titles", new HashSet<>());
 
-        if (savedSet.isEmpty()) {
+        recipeContainer.removeAllViews();
+
+        if (savedTitles.isEmpty()) {
             emptyMessage.setVisibility(View.VISIBLE);
-            recipeContainer.setVisibility(View.GONE);
             return;
         }
 
         emptyMessage.setVisibility(View.GONE);
-        recipeContainer.setVisibility(View.VISIBLE);
 
-        for (String recipeTitle : savedSet) {
+        for (String title : savedTitles) {
+            String plant = prefs.getString(title + "_plant", "");
+            String shortDesc = prefs.getString(title + "_shortDesc", "");
+            String fullDesc = prefs.getString(title + "_fullDesc", "");
+            int imageResId = prefs.getInt(title + "_image", 0);
+
             View item = getLayoutInflater().inflate(R.layout.item_recipe, recipeContainer, false);
-            TextView title = item.findViewById(R.id.recipeTitle);
-            TextView desc = item.findViewById(R.id.recipeDesc);
-            ImageView img = item.findViewById(R.id.recipeImage);
 
-            title.setText(recipeTitle);
+            TextView titleView = item.findViewById(R.id.recipeTitle);
+            TextView descView = item.findViewById(R.id.recipeDesc);
+            ImageView imgView = item.findViewById(R.id.recipeImage);
 
-            //get saved fields
-            String shortDesc = prefs.getString(recipeTitle + "_short", "Tap to view recipe");
-            String fullDesc  = prefs.getString(recipeTitle + "_full", "");
-            int imageRes     = prefs.getInt(recipeTitle + "_image", 0);
-
-            desc.setText(shortDesc);
-
-            if (imageRes != 0) {
-                img.setImageResource(imageRes);
-            }
+            titleView.setText(title);
+            descView.setText(shortDesc); // show short description in card
+            if (imageResId != 0) imgView.setImageResource(imageResId);
 
             item.setOnClickListener(v -> {
                 Intent intent = new Intent(SavedRecipesActivity.this, RecipeDetailActivity.class);
-                intent.putExtra("title", recipeTitle);
-                intent.putExtra("shortDesc", shortDesc);
-                intent.putExtra("description", fullDesc);
-                intent.putExtra("imageResId", imageRes);
+                intent.putExtra("title", title);
+                intent.putExtra("plantName", plant);
                 startActivity(intent);
             });
+
             recipeContainer.addView(item);
         }
     }

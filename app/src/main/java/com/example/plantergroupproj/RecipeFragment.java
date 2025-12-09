@@ -254,14 +254,10 @@ public class RecipeFragment extends Fragment {
         recipeItemView.setOnClickListener(v -> {
             Intent intent = new Intent(requireContext(), RecipeDetailActivity.class);
             intent.putExtra("title", recipe.getTitle());
-            intent.putExtra("imageResId", recipe.getImageResId());
-            intent.putExtra("shortDesc", recipe.getShortDescription());
-            intent.putExtra("description", recipe.getFullDescription());
-       //     intent.putExtra("recipeId", recipe.getId());
             intent.putExtra("plantName", recipe.getPlantName());
-
             startActivity(intent);
         });
+
 
         // giving the recipes to recipe detail activity from this fragment where they are created
         // so ill create them on initial and put them in the database and then ill just update the recipe detail activity
