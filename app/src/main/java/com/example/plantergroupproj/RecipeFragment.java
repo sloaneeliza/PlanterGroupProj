@@ -93,7 +93,7 @@ public class RecipeFragment extends Fragment {
                 recipes.add(new Recipe("Bay Leaf Pound Cake",
                         "Moist fragrant pound cake.",
                         "Mix batter with bay flavor. Bake until golden.",
-                        R.drawable.walnutpesto, "Bay"));
+                        R.drawable.bay_poundcake, "Bay"));
                 break;
 
             case "Mint":
