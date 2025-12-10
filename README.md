@@ -11,6 +11,3 @@ Meet Sprig—the elegant and essential app that connects your plants to your pla
 🥗 Recipe Inspiration: Got fresh basil? We'll show you how to use it! Discover hundreds of curated recipes matched directly to your current harvest.
 
 Sprig helps you maximize your yield and minimize waste. Download today and turn your greens into gourmet! ✅
-
-
-Functionality 
